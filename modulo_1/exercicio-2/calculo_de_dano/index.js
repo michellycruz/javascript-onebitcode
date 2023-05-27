@@ -5,7 +5,9 @@
     
 - Se o poder de ataque for maior do que a defesa e o defensor possuir um escudo, o dano causado será igual a metade da diferença entre o ataque e a defesa. 
 
-- Se o poder de ataque for menor ou igual a defesa, o dano causado será 0. Por fim, o programa deve subtrair a quantidade de dano da quantidade de pontos de vida do personagem defensor e exibir na tela a quantidade de dano e as informações atualizadas de ambos os personagens.](https://www.mindmeister.com/map/2783164157)
+- Se o poder de ataque for menor ou igual a defesa, o dano causado será 0. 
+
+Por fim, o programa deve subtrair a quantidade de dano da quantidade de pontos de vida do personagem defensor e exibir na tela a quantidade de dano e as informações atualizadas de ambos os personagens.](https://www.mindmeister.com/map/2783164157)
 
 1ª inserir nome e poder de ataque de um personagem
 2ª nome e quantidade de vida e poder de defesa de outro personagem
@@ -19,24 +21,54 @@
 */
 
 let atacante = prompt("Qual o nome do personagem atacante?")
-let ataque = prompt("Quanto é o poder de ataque?")
+let ataque = parseFloat(prompt("Quanto é o poder de ataque?"))
 
 let defensor = prompt("Qual o nome do defensor?")
-let defesa = prompt("Quanto é seu poder de defesa?")
-let vida = prompt("Qual a quantidade de pontos de vida que ele possui?")
+let defesa = parseFloat(prompt("Quanto é seu poder de defesa?"))
+let vida = parseFloat(prompt("Qual a quantidade de pontos de vida que ele possui?"))
 let escudo = prompt("Ele possui um escudo? sim/não")
 let dano
 
-if (ataque > defesa && escudo == "não") {
+if (ataque > defesa && escudo === "não") {
 
-    (dano = (ataque - defesa))
-    alert("O personagem "+ atacante + " fez " + dano + " pontos de ataque.")
+    dano = ataque - defesa;
+    vida = vida - dano;
+    alert("O personagem "+ atacante + " fez " + dano + " pontos de ataque.");
 
-} else if (ataque > defesa && escudo == "sim") {
+    window.alert("Resultados finais: \n" +
 
-    (dano = (ataque - defesa) * 0.5)
-    alert("O personagem "+ atacante + " fez " + dano + " pontos de ataque.")
+    atacante + " fez " + dano + " pontos de ataque \n" +
+
+    defensor + " ficou com " + vida + " pontos de vida"
+
+);
+
+} else if (ataque > defesa && escudo === "sim") {
+
+    dano = (ataque - defesa) * 0.5;
+    (vida = vida - dano);
+    alert("O personagem "+ atacante + " fez " + dano + " pontos de ataque.");
+
+        window.alert("Resultados finais: \n" +
+
+        atacante + " fez " + dano + " pontos de ataque \n" +
+
+        defensor + " ficou com " + vida + " pontos de vida"
+
+);
     
-}   else (ataque <= defesa){
-    (dano = 0)
+}   else if (ataque <= defesa) {
+    dano = 0;
+    vida = vida - dano;
+
+    alert("O personagem "+ atacante + " fez " + dano + " pontos de ataque.");
+
+        window.alert("Resultados finais: \n" +
+
+        atacante + " fez " + dano + " pontos de ataque \n" +
+
+        defensor + " ficou com " + vida + " pontos de vida"
+
+    );
 }
+
