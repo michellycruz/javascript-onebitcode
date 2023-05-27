@@ -13,4 +13,11 @@ const anoAtual = new Date().getFullYear()
 let idade = (anoAtual - ano)
 
 
-window.alert(nome + " " + estudo + " " + idade)
+window.alert(
+
+"Recruta cadastrado com sucesso! |" 
++ " Nome completo: " + nome 
++ " | Campo de estudo: " + estudo 
++ " | Idade: " + idade
+
+)
