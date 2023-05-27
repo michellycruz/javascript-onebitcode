@@ -46,7 +46,7 @@ if (ataque > defesa && escudo === "não") {
 } else if (ataque > defesa && escudo === "sim") {
 
     dano = (ataque - defesa) * 0.5;
-    (vida = vida - dano);
+    vida = vida - dano;
     alert("O personagem "+ atacante + " fez " + dano + " pontos de ataque.");
 
         window.alert("Resultados finais: \n" +
