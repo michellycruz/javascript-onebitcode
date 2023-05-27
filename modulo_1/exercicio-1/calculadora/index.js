@@ -11,8 +11,16 @@ let mul = n1 * n2
 let div = n1 / n2
 
 
+alert(
+    "A soma de " + n1 + " + " + n2 + " = " + soma +
+    "\nA subtração de " + n1 + " - " + n2 + " = " + sub +
+    "\nA multiplicação de " + n1 + " * " + n2 + " = " + mul +
+    "\nA divisão de " + n1 + " / " + n2 + " = " + div
+)
 
-alert("A soma de " + n1 + " + " + n2 + " = " + soma)
+
+
+/* alert("A soma de " + n1 + " + " + n2 + " = " + soma)
 alert("A subtração de " + n1 + " - " + n2 + " = " + sub)
 alert("A multiplicação de " + n1 + " * " + n2 + " = " + mul)
-alert("A divisão de " + n1 + " / " + n2 + " = " + div)
+alert("A divisão de " + n1 + " / " + n2 + " = " + div) */

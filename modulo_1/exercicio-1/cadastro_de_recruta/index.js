@@ -15,9 +15,9 @@ let idade = (anoAtual - ano)
 
 window.alert(
 
-"Recruta cadastrado com sucesso! |" 
-+ " Nome completo: " + nome 
-+ " | Campo de estudo: " + estudo 
-+ " | Idade: " + idade
+"Recruta cadastrado com sucesso! \n" 
++ "\nNome completo: " + nome 
++ "\nCampo de estudo: " + estudo 
++ "\nIdade: " + idade
 
 )
