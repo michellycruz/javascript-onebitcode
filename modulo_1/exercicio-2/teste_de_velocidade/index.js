@@ -11,12 +11,12 @@ let velcarro2 = prompt("Qual a velocidade dele?")
 
 if (velcarro1 > velcarro2){
 
-    alert(carro1 + " é mais veloz que " + carro2);
+    alert(carro1 + " é mais rápido que " + carro2);
 
 } else if (velcarro2 > velcarro1) {
 
-    alert(carro2 + " é mais veloz que " + carro1);
+    alert(carro2 + " é mais rápido que " + carro1);
 
-} else if (velcarro1 == velcarro2) {
+} else {
     alert("A " + " velocidade do " + carro1 + " e a do " + carro2 + " são iguais");
 }
