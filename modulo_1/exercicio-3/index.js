@@ -3,44 +3,44 @@
 
 */
 
-    const metros = prompt("Defina o valor em metros que deseja converter")
-    const resultado = prompt("Para qual unidade de medida gostaria de converter? \na) milímetro (mm) \nb) centímetro (cm) \nc) decímetro (dm) \n d) decâmetro (dam) \ne) hectômetro (hm) \nf) quilômetro (km)")
-    const resultadoNumerico = parseFloat(metros)
+    let metros = prompt("Defina o valor em metros que deseja converter")
+    let resultado = prompt("Para qual unidade de medida gostaria de converter? \na) milímetro (mm) \nb) centímetro (cm) \nc) decímetro (dm) \nd) decâmetro (dam) \ne) hectômetro (hm) \nf) quilômetro (km)")
+    let resultadoNumerico = parseFloat(metros)
 
-    switch (resultadoNumerico){
+    switch (resultado){
         case "a":
-            (resultado = (metros * 1000))
+            resultado = resultadoNumerico * 1000
         alert("O valor de " + metros + "m em milímetros é " + resultado + "mm")
 
         break
 
         case "b":
-            (resultado = (metros * 100))
+            resultado = resultadoNumerico * 100
         alert("O valor de " + metros + "m em centímetros é " + resultado + "cm")
 
         break
 
         case "c":
-            (resultado = (metros * 10))
+            resultado = resultadoNumerico * 10
         alert("O valor de " + metros + "m em decímetros é " + resultado + "dm")
 
         break
 
-        case "a":
-            (resultado = metros * 0.1)
-        alert("O valor de " + metros + "m em decâmetros é" + resultado + "dam")
+        case "d":
+            resultado = resultadoNumerico * 0.1
+        alert("O valor de " + metros + "m em decâmetros é " + resultado + "dam")
 
         break
 
-        case "a":
-            (resultado = metros * 0.01)
-        alert("O valor de " + metros + "m em hectômetros é" + resultado + "hm")
+        case "e":
+            resultado = resultadoNumerico * 0.01
+        alert("O valor de " + metros + "m em hectômetros é " + resultado + "hm")
 
         break
 
-        case "a":
-            (resultado = metros * 0.001)
-        alert("O valor de " + metros + "m em quilômetros é" + resultado + "km")
+        case "f":
+            resultado = resultadoNumerico * 0.001
+        alert("O valor de " + metros + "m em quilômetros é " + resultado + "km")
 
         break
 
