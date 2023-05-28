@@ -4,7 +4,7 @@
 
 
 const turista = prompt("Qual o nome do turista?")
-let  cidades = " "
+let cidades = ""
 let contagem = 0
 let continuar = prompt("Você visitou alguma cidade? sim/não")
 
@@ -15,4 +15,10 @@ let continuar = prompt("Você visitou alguma cidade? sim/não")
         continuar = prompt("Você visitou mais alguma outra cidade? sim/não")
     }
 
-alert("Nome: " + turista + "\nVisitou: " + contagem + " cidades" + "\nCidades:\n" + cidades)
+alert(
+    
+    "Nome: " + turista + 
+    "\nVisitou: " + contagem + " cidades" + 
+    "\nCidades visitadas:\n" + cidades
+    
+    )
