@@ -21,3 +21,4 @@ alert(
     "Quantidade de cidades visitadas: " + contagem + "\n" +
     "As cidades foram:\n" + cidades
 )
+
