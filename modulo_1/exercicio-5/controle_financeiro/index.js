@@ -37,10 +37,8 @@ let subtrair = 0
 
             break
 
-            default:
-            alert("Comando inválido")
-
         } 
         
     } while (opcao !== "3") 
 
+alert("Encerrando...")
