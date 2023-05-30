@@ -21,17 +21,17 @@ let somar = 0
 let subtrair = 0
 
     do {
-    opcao = prompt("Você tem " + dinheiro + " de saldo, gostaria de adicionar, remover ou sair?")
+    opcao = prompt("Você tem " + dinheiro + " de saldo, gostaria de: \n1 - Adicionar \n2- Remover \n3- Sair")
 
         switch (opcao) {
 
-            case "adicionar":
+            case "1":
         somar = parseFloat(prompt("Quanto você gostaria de adicionar?"))
         dinheiro += somar
 
             break
 
-            case "remover": 
+            case "2": 
         subtrair = parseFloat(prompt("Quanto você gostaria de remover?"))
         dinheiro -= subtrair
 
@@ -42,5 +42,5 @@ let subtrair = 0
 
         } 
         
-    } while (opcao !== "sair") 
+    } while (opcao !== "3") 
 
