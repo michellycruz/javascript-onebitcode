@@ -20,7 +20,7 @@ let opcao = ""
 let somar = 0
 let subtrair = 0
 
-    while (opcao !== "sair") {
+    do {
     opcao = prompt("Você tem " + dinheiro + " de saldo, gostaria de adicionar, remover ou sair?")
 
         switch (opcao) {
@@ -35,7 +35,12 @@ let subtrair = 0
         subtrair = parseFloat(prompt("Quanto você gostaria de remover?"))
         dinheiro -= subtrair
 
-        }
- 
-    }
+            break
+
+            default:
+            alert("Comando inválido")
+
+        } 
+        
+    } while (opcao !== "sair") 
 
