@@ -14,3 +14,8 @@ Lembre-se de que é importante considerar a manipulação de strings e o uso dos
 
 let palavra = prompt("-----VERIFICADOR DE PALINDROMOS-----\n" + "\nQual palavra você gostaria de verificar se é um palindromo ou não?")
 let invertida = ""
+
+	for (let indice = 0; indice <= palavra.length; indice++) {
+        palavra -= invertida
+			alert(palavra[indice])
+	}
