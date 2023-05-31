@@ -12,10 +12,15 @@ Lembre-se de que é importante considerar a manipulação de strings e o uso dos
 
 */
 
-let palavra = prompt("-----VERIFICADOR DE PALINDROMOS-----\n" + "\nQual palavra você gostaria de verificar se é um palindromo ou não?")
-let invertida = ""
+const palavra = prompt("VERIFICADOR DE PALINDROMOS" + "\n\n Qual palavra você gostaria de saber se é um palíndromo ou não?")
+let palavraInvertida = ""
 
-	for (let indice = 0; indice <= palavra.length; indice++) {
-        palavra -= invertida
-			alert(palavra[indice])
+	for(indice = palavra.length - 1 ; indice >= 0 ; indice--){
+		palavraInvertida += palavra[indice]
 	}
+
+		if(palavra === palavraInvertida){
+			alert("Essa palavra é um palíndromo " + "\n\nNormal: " + palavra + "\n\nInvertido: " + palavraInvertida)
+		} else {
+			alert("Essa não palavra é um palíndromo " + "\n\nNormal: " + palavra + "\n\nInvertido: " + palavraInvertida)
+		}
