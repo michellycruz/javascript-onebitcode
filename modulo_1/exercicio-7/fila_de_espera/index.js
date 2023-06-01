@@ -14,10 +14,10 @@ let opcao = ""
 
        for (let indice = 0; indice < filaDeEspera.length; indice++){
         nomePaciente += (indice + 1) + "º -" + filaDeEspera[indice] + "\n"
-       }
-             
+       }      
         opcao = prompt("Essa é a fila de Espera: \n" + nomePaciente + "\n\nO que deseja fazer? " + "\n1 - Novo paciente " + "\n2 - Consultar paciente " + "\n3 - Sair")
     
+
         switch (opcao) {
 
             case "1":
@@ -28,8 +28,12 @@ let opcao = ""
 
             case "2":
             const pacienteConsultado = filaDeEspera.shift()
-            alert(pacienteConsultado + " foi para a consulta")
 
+            if(pacienteConsultado){
+            alert(pacienteConsultado + " foi para a consulta")
+                 } else{
+                    alert("A fila está vazia!")
+                 }
             break
 
             case "3":
