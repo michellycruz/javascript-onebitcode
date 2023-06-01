@@ -55,4 +55,8 @@ console.log(elementosRemovidos)
 //usando o slice, os elementos removidos são adicionados em uma nova lista, no caso acima "torbjorn" foi adicionado a lista da variável "elementosRemovidos"
 
 
-
+//iterar sobre os elementos
+for (let indice = 0; indice < sociedade.length; indice++){
+    const elemento = sociedade[indice]
+    console.log(elemento + " se encontra na posição " + indice)
+}
