@@ -40,3 +40,19 @@ const outros = arr.slice(-4)
 console.log(arr)
 console.log(herois)
 console.log(outros)
+
+
+//concat
+const sociedade = herois.concat(outros, "Mercy")
+console.log(sociedade)
+
+//Substituição dos elementos
+//splice -> remover um grupo de elementos do array e substituir esse grupo por outros elementos
+const elementosRemovidos = sociedade.splice (indice, 1, "Torbjorn, pai da briguita")
+console.log(sociedade)
+console.log(elementosRemovidos)
+
+//usando o slice, os elementos removidos são adicionados em uma nova lista, no caso acima "torbjorn" foi adicionado a lista da variável "elementosRemovidos"
+
+
+
