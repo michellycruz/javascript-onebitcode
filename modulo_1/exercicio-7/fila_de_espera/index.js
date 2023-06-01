@@ -13,9 +13,9 @@ let opcao = ""
        let nomePaciente = ""    
 
        for (let indice = 0; indice < filaDeEspera.length; indice++){
-        nomePaciente += (indice + 1) + "º -" + filaDeEspera[indice] + "\n"
+        nomePaciente += (indice + 1) + "º - " + filaDeEspera[indice] + "\n"
        }      
-        opcao = prompt("Essa é a fila de Espera: \n" + nomePaciente + "\n\nO que deseja fazer? " + "\n1 - Novo paciente " + "\n2 - Consultar paciente " + "\n3 - Sair")
+        opcao = prompt("Essa é a fila de Espera: \n" + nomePaciente + "\nO que deseja fazer? " + "\n1 - Novo paciente " + "\n2 - Consultar paciente " + "\n3 - Sair")
     
 
         switch (opcao) {
