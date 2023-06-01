@@ -34,3 +34,9 @@ const indice = arr.indexOf("Torbjorn")
 console.log(indice)
 
 //cortar e concatenar
+//slice
+const herois = arr.slice(0, 4)
+const outros = arr.slice(-4)
+console.log(arr)
+console.log(herois)
+console.log(outros)
