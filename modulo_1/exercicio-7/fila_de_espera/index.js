@@ -10,26 +10,35 @@ let filaDeEspera = []
 let opcao = ""
 
     do{
-        opcao = prompt("O que deseja fazer? " + "\n\n1 - Novo paciente " + "\n\n2 - Consultar paciente " + "\n\n3 - Sair")
-           
+       let nomePaciente = ""    
 
-        if(opcao === "1"){
-            let nomePaciente = prompt("Qual o nome do novo paciente?")
-            nomePaciente = filaDeEspera.push(nomePaciente)
+       for (let indice = 0; indice < filaDeEspera.length; indice++){
+        nomePaciente += (indice + 1) + "º -" + filaDeEspera[indice] + "\n"
 
-        } else if (opcao === "2") {
-            let consulta = filaDeEspera.shift()
-            if(consulta){
-                alert("Paciente consultado = " + consulta)
-            } else{
-                alert("A fila de espera está vazia.")
-            }
+        opcao = prompt("Essa é a fila de Espera: \n" + nomePaciente + "\n\nO que deseja fazer? " + "\n1 - Novo paciente " + "\n2 - Consultar paciente " + "\n3 - Sair")
         }
 
-    
-        for (let indice = 0; indice < filaDeEspera.length; indice++){
-        nomePaciente += "- " + (indice + 1) + "º " + filaDeEspera[indice] + "\n"
-        opcao = prompt("Essa é a fila de Espera: " + nomePaciente + "\n\nO que deseja fazer? " + "\n1 - Novo paciente " + "\n2 - Consultar paciente " + "\n3 - Sair")
+        switch (opcao) {
+
+            case "1":
+            const novoPaciente = prompt("Qual é o nome do novo paciente?")
+            filaDeEspera.push(novoPaciente)
+
+            break
+
+            case "2":
+            const pacienteConsultado = filaDeEspera.shift()
+            alert(pacienteConsultado + " foi para a consulta")
+
+            break
+
+            case "3":
+            alert("Encerrando...")
+            
+            break
+
+            default:
+                alert("Opção inválida")
         }
 
     } while (opcao !== "3")
