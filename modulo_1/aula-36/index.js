@@ -29,9 +29,16 @@ const matriz = [
 ]
 
 // exibe tabelas no console
-console.table(matriz)
+        // console.table(matriz)
 
-matriz.push(["Nova linha"])
-matriz[0].push("Nova coluna")
+       // matriz.push(["Nova linha"])
+       // matriz[0].push("Nova coluna")
 
-console.table(matriz)
+       // console.table(matriz)
+
+    for (let i = 0; i < matriz.length; i++){
+        for(let j = 0; j < matriz[i].length; j++) {
+            const elemento = matriz[i][j]
+            console.log("Posição: (" + i + ", " + j + ") Valor: " + elemento)
+        }
+    }
