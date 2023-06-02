@@ -12,14 +12,15 @@ let opcao
 
         switch(opcao){
             case "1":
-                let cartaAdicionada = baralho.push(prompt("Qual carta você gostaria de adicionar?"))
+                const novaCarta = prompt("Qual carta você gostaria de adicionar?")
+                baralho.push(novaCarta)
 
                 break
 
             case "2":
-                baralho.pop()
-                alert("A carta " + cartaAdicionada + " foi removida do baralho")
-                
+                baralho.pop(novaCarta)
+                alert("A carta " + novaCarta + " foi removida do baralho")
+
                 break
 
             case "3":
