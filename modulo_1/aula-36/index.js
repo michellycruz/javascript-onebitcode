@@ -21,6 +21,7 @@ console.log(arr[2])
 console.log(arr[2][1])
 console.log(arr[2][1][0])
 
+//tabelas
 const matriz = [
     ["l1, c1", "l1, c2", "l1, c3", "l1, c4"],
     ["l2, c1", "l2, c2", "l2, c3", "l2, c4"],
@@ -30,3 +31,7 @@ const matriz = [
 // exibe tabelas no console
 console.table(matriz)
 
+matriz.push(["Nova linha"])
+matriz[0].push("Nova coluna")
+
+console.table(matriz)
