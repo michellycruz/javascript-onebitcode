@@ -18,8 +18,12 @@ let opcao
                 break
 
             case "2":
-                baralho.pop(novaCarta)
-                alert("A carta " + novaCarta + " foi removida do baralho")
+                const cartaPuxada  = baralho.pop()
+                if(!cartaPuxada){
+                    alert("Não há nenhuma carta no baralho")
+                } else{
+                    alert("A carta " + cartaPuxada + " foi puxada do baralho")
+                }
 
                 break
 
