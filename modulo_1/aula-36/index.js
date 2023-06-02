@@ -26,3 +26,7 @@ const matriz = [
     ["l2, c1", "l2, c2", "l2, c3", "l2, c4"],
     ["l3, c1", "l3, c2", "l3, c3", "l3, c4"],
 ]
+
+// exibe tabelas no console
+console.table(matriz)
+
