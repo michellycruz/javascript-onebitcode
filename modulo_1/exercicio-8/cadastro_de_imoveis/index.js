@@ -33,6 +33,8 @@
                 )
                 if(confirmacao){
                     imoveis.push(imovel)
+                } else{
+                    alert("Voltando ao menu...")
                 }
 
             break
