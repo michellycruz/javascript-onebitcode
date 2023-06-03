@@ -17,23 +17,44 @@
         opcao = prompt("Bem vindo ao cadastro de imóveis, o que deseja fazer?" + " Imóveis: " + imoveis.length + "\n\n1 - Salvar um imóvel" + "\n2 - Mostrar todos os imóveis salvos" + "\n3 - Sair")
 
         switch(opcao){
-            case "1":{
-                imoveis.proprietario = prompt("Qual o nome do proprietário?")
-                imoveis.quartos = prompt("Qual a quantidade de quartos que o imóvel tem?")
-                imoveis.banheiros = prompt("Quantos banheiros?")
-                imoveis.garagem = prompt("Possui garagem?")
-            }
+            case "1":
+                const imovel = {}
+                imovel.proprietario = prompt("Qual o nome do proprietário?")
+                imovel.quartos = prompt("Qual a quantidade de quartos que o imóvel tem?")
+                imovel.banheiros = prompt("Quantos banheiros?")
+                imovel.garagem = prompt("Possui garagem? sim/não")
+
+                const confirmacao = confirm(
+                    "Deseja salvar esse imóvel?" +
+                    "\nProprietário: " + imovel.proprietario +
+                    "\nQuartos: " + imovel.quartos +
+                    "\nBanheiros: " + imovel.banheiros +
+                    "\nGaragem: " + imovel.garagem
+                )
+                if(confirmacao){
+                    imoveis.push(imovel)
+                }
 
             break
 
             case "2": 
-                alert("Esses são os imóveis cadastrados:" + "\n\n" + imoveis)
+                for(let i = 0; i < imoveis.length; i++) {
+                    alert(
+                        "Imóvel: " + (i + 1) + 
+                        "\nProprietário: " + imoveis[i].proprietario +
+                        "\nQuartos: " + imoveis[i].quartos +
+                        "\nBanheiros: " + imoveis[i].banheiros +
+                        "\nGaragem: " + imoveis[i].garagem 
+                    )
+                }
 
             break
 
             case "3": 
                 alert("Encerrando...")
-            
+
+            break
+
             default:
                 alert("Comando inválido")
         }
