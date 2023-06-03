@@ -17,7 +17,7 @@
         opcao = prompt("Bem vindo ao cadastro de imóveis, o que deseja fazer?" + " Imóveis: " + imoveis.length + "\n\n1 - Salvar um imóvel" + "\n2 - Mostrar todos os imóveis salvos" + "\n3 - Sair")
 
         switch(opcao){
-            case 1:{
+            case "1":{
                 imoveis.proprietario = prompt("Qual o nome do proprietário?")
                 imoveis.quartos = prompt("Qual a quantidade de quartos que o imóvel tem?")
                 imoveis.banheiros = prompt("Quantos banheiros?")
@@ -26,19 +26,17 @@
 
             break
 
-            case 2: {
-                
-
-            }
+            case "2": 
+                alert("Esses são os imóveis cadastrados:" + "\n\n" + imoveis)
 
             break
 
-            case 3: {
+            case "3": 
                 alert("Encerrando...")
-            }
+            
             default:
                 alert("Comando inválido")
         }
-        
-    }while(opcao !== 3)
+
+    }while(opcao !== "3")
 
