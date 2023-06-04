@@ -48,3 +48,6 @@ function maiorIdade(idade){
 }
 
     console.log(maiorIdade(20))
+
+
+  
