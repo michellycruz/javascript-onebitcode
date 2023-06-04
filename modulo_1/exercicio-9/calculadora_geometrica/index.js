@@ -27,12 +27,13 @@ do{
 
     switch(opcao){
         case "1" :
-        const baseTriangulo = parseFloat(prompt("Por favor, informe o valor da base do triângulo"))
-        const alturaTriangulo = parseFloat(prompt("Por favor, informe o valor da altura do triângulo"))
+        let baseTriangulo = parseFloat(prompt("Por favor, informe o valor da base do triângulo"))
+        let alturaTriangulo = parseFloat(prompt("Por favor, informe o valor da altura do triângulo"))
 
             function triangulo(baseTriangulo, alturaTriangulo){
-                const area = baseTriangulo * alturaTriangulo
-                return area
+                
+                const areaTriangulo = baseTriangulo * alturaTriangulo / 2
+                return areaTriangulo
             }
 
         const areaTriangulo = triangulo(baseTriangulo, alturaTriangulo)
@@ -41,7 +42,11 @@ do{
         break
 
         case "2":
+        const baseRetangulo = parseFloat(prompt("Por favor, informe o valor da base do retângulo"))
+        const alturaRetangulo = parseFloat(prompt("Por favor, informe o valor da altura do retângulo"))
         
-
+         function retangulo(baseRetangulo, alturaRetangulo){
+            const
+         }
     }
 } while(opcao !== "6")
