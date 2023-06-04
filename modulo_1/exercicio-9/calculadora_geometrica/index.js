@@ -27,26 +27,55 @@ do{
 
     switch(opcao){
         case "1" :
+            //área do triângulo: base * altura / 2
         let baseTriangulo = parseFloat(prompt("Por favor, informe o valor da base do triângulo"))
         let alturaTriangulo = parseFloat(prompt("Por favor, informe o valor da altura do triângulo"))
 
             function triangulo(baseTriangulo, alturaTriangulo){
-                
+
                 const areaTriangulo = baseTriangulo * alturaTriangulo / 2
                 return areaTriangulo
             }
 
-        const areaTriangulo = triangulo(baseTriangulo, alturaTriangulo)
-        alert("A área do triangulo é de = " + areaTriangulo)
+         alert("A área do triangulo é de = " + triangulo(baseTriangulo, alturaTriangulo))
 
         break
 
         case "2":
-        const baseRetangulo = parseFloat(prompt("Por favor, informe o valor da base do retângulo"))
-        const alturaRetangulo = parseFloat(prompt("Por favor, informe o valor da altura do retângulo"))
+            // área do retângulo: base * altura
+        let baseRetangulo = parseFloat(prompt("Por favor, informe o valor da base do retângulo"))
+        let alturaRetangulo = parseFloat(prompt("Por favor, informe o valor da altura do retângulo"))
         
-         function retangulo(baseRetangulo, alturaRetangulo){
-            const
-         }
-    }
+            function retangulo(baseRetangulo, alturaRetangulo){
+                const areaRetangulo = baseRetangulo * alturaRetangulo
+                return areaRetangulo
+            }
+        
+        alert("A área do retângulo é de = " + retangulo(baseRetangulo, alturaRetangulo))
+        
+        break
+
+        case "3":
+            //área do quadrado: lado²
+        let ladoQuadrado = parseFloat(prompt("Por favor, informe o valor do lado do quadrado"))
+            
+            function quadrado(ladoQuadrado){
+                const areaQuadrado = ladoQuadrado * ladoQuadrado
+                return areaQuadrado
+            }
+        
+        alert("A área do quadrado é de = " + quadrado(ladoQuadrado))
+
+        break
+
+        case "4":
+            //- área do trapézio: (base maior + base menor) * altura / 2
+        let baseMaior = parseFloat(prompt("Por favor, informe o valor da base maior do trapézio"))
+        let baseMenor = 
+
+        break
+        case "5":
+            //- área do círculo: pi * raio² (considere pi = 3.14)
+
+     }
 } while(opcao !== "6")
