@@ -5,4 +5,37 @@ function calcularMedia(a, b){
 
 const resultado = calcularMedia(3, 8)
 
-console.log(resultado)
+//console.log(resultado)
+
+function criarProduto(nome, preco){
+    const produto = {
+        nome,
+        preco,
+        estoque: 1
+    }
+    return produto
+}
+
+//console.log(criarProduto("Notebook intel core i3 8gb", 2500)
+
+function areaRetangular(base, altura) {
+    return base * altura
+}
+
+function areaQuadrada(lado){
+    return areaRetangular(lado, lado)
+}
+
+//console.log(areaRetangular(5, 10))
+
+//console.log(areaQuadrada(9))
+
+function ola() {
+    let texto = "..."
+    texto = "Olá, mundo"
+    return texto
+    console.log(texto)
+}
+
+console.log(ola())
+
