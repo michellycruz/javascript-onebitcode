@@ -71,11 +71,29 @@ do{
         case "4":
             //- área do trapézio: (base maior + base menor) * altura / 2
         let baseMaior = parseFloat(prompt("Por favor, informe o valor da base maior do trapézio"))
-        let baseMenor = 
+        let baseMenor = parseFloat(prompt("Por favor, informe o valor da base menor do trapézio"))
+        let alturaTrapezio = parseFloat(prompt("Por favor, informe a altura do trapézio"))
+
+            function trapezio(baseMaior, baseMenor, alturaTrapezio) {
+                const areaTrapezio = (baseMaior + baseMenor) * alturaTrapezio / 2
+                return areaTrapezio
+            }
+        
+        alert("A área do trapézio é de = " + trapezio(baseMaior, baseMenor, alturaTrapezio))
 
         break
+
         case "5":
             //- área do círculo: pi * raio² (considere pi = 3.14)
+        let raio = parseFloat(prompt("Por favor, informe o valor do raio"))
+        let pi = 3.14
+
+            function circulo(raio, pi){
+                const areaCirculo = (pi * (raio * raio))
+                return areaCirculo
+            }
+        
+        alert("A área do circulo é de = " + circulo(raio, pi))
 
      }
 } while(opcao !== "6")
