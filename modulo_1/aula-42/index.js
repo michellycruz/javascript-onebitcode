@@ -18,7 +18,7 @@ function soma(a, b) {
 
 // soma(5, 5)
 
-function criarUsuario(nome, email, senha, tipo = "admin"){
+function criarUsuario(nome, email, senha, tipo = "admin"){ //parâmetros que tem o valor padrão devem ser exibidos por último, "tipo = "admin" é um valor padrão
     const usuario = {
         nome, // mesmo que nome: nome
         email,
