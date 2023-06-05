@@ -9,3 +9,5 @@ let pessoa = {
 //console.log(pessoa)
 
 pessoa.dizerOla()
+
+
