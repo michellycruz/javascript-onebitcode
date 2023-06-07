@@ -6,17 +6,18 @@ function exibirElemento(elemento, indice, array){
     })
 }
 
-
 const lista = ["Maçã", "Banana", "Laranja", "Limão"]
 
-for (let i = 0; i< lista.length; i++){
+// Primeira forma: Chamada direta da função exibirElemento
+for (let i = 0; i < lista.length; i++){
     exibirElemento(lista[i], i, lista)
 }
 
-lista.forEach(exibirElemento) //callBackfn
+// Segunda forma: Uso do método forEach com a função exibirElemento como argumento
+lista.forEach(exibirElemento)
 
-
-lista.forEach(function (elemento, indice, array){
+// Terceira forma: Uso de uma função anônima como argumento para o método forEach
+lista.forEach(function(elemento, indice, array){
     console.log({
         elemento,
         indice,
