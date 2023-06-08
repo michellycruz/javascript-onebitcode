@@ -20,7 +20,7 @@ const nomes = personagens.map(function(personagem){
     return personagem.nome
 })
 
-console.log(nomes)
+//console.log(nomes)
 
 //filter
 
@@ -38,7 +38,7 @@ const orcs = personagens.filter(function(personagem){
     return personagem === "Orc"
 })
 
-console.log(orcs)
+//console.log(orcs)
 
 
 //reduce
@@ -47,7 +47,7 @@ const nivelTotal = personagens.reduce(function(valorAcumulado, personagem){
     return valorAcumulado + personagem.nivel
 }, 0)
 
-console.log(nivelTotal)
+//console.log(nivelTotal)
 
 const racas = personagens.reduce(function (valorAcumulado, personagem){
     if (valorAcumulado[personagem.raca]){
@@ -59,13 +59,14 @@ const racas = personagens.reduce(function (valorAcumulado, personagem){
     return valorAcumulado
 }, {})
 
-console.log(racas)
+//console.log(racas)
 
 
-//sort   (o sort altera o array original)
+//sort   (o sort altera o array original) uma dica para alterar o sort sem alterar o array original é usando o slice
 
-personagens.sort(function (a, b){
-    return a.nivel - b.nivel
+const personagensOrdenados = personagens.slice().sort(function (a, b){
+    return b.nivel - a.nivel
 })
 
 console.log(personagens)
+console.log(personagensOrdenados)
