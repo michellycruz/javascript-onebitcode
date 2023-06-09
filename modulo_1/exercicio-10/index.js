@@ -32,9 +32,15 @@ function novaVaga(){
 
 function exibirVaga(){
     const indice = prompt("Informe o indice da vaga que deseja exibir: ")
+
+    if(indice >= vagas.length || indice < 0) {
+        alert("Indice inválido")
+        return
+    }
+    
     const vaga = vagas[indice]
 
-    const candidatosEmTexto = vagas.candidatos.reduce(function(textoFinal, candidato){
+    const candidatosEmTexto = vaga.candidatos.reduce(function(textoFinal, candidato){
         return textoFinal + "\n - " + candidato
     }, "")
 
@@ -125,11 +131,15 @@ function executar(){
             case "5": 
                 excluirVaga()
                 break
+
             case "6":
                 alert("Finalizando o programa...") 
-            
+                break
+
             default:
                 alert("Comando inválido")
         }
     } while (opcao !== "6")
 }
+
+executar()
