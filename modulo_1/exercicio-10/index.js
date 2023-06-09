@@ -1,4 +1,10 @@
-const executarMenu = function (){
+const vagas = []
+
+function listarVagas(){
+    
+}
+
+function executarMenu (){
     return prompt("Sistema de vagas de emprego -" + " Selecione uma opção" +
     "\n1 - Listar vagas disponíveis" +
     "\n2 - Criar uma nova vaga" +
@@ -8,4 +14,5 @@ const executarMenu = function (){
     "\n6 - Sair"
     )
 }
+
 
