@@ -95,4 +95,41 @@ function exibirMenu(){
         "\n5. Excluir uma vaga" +
         "\n6. sair"
     )
+
+    return opcao
+}
+
+function executar(){
+    let opcao = ""
+
+    do{
+        opcao = exibirMenu()
+
+        switch(opcao){
+            case "1":
+                listarVagas()
+                break 
+
+            case "2":
+                novaVaga()
+                break
+
+            case "3":
+                exibirVaga()
+                break
+
+            case "4": 
+                inscreverCandidato()
+                break
+
+            case "5": 
+                excluirVaga()
+                break
+            case "6":
+                alert("Finalizando o programa...") 
+            
+            default:
+                alert("Comando inválido")
+        }
+    } while (opcao !== "6")
 }
