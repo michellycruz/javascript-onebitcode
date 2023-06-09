@@ -13,6 +13,5 @@ alert("| Pessoa mais velha |" +
       "\n\n| Pessoa mais nova |" +
       "\nNome: " + nomePMN +
       "\nIdade: " + idadePMN +
-      "\n\n| Diferença de idade |" +
-      "\nA diferença de idade entre as duas pessoas é de " + diferencaIdade + " anos"
+      "\n\nDiferença de idade: " + diferencaIdade + " anos"
       )
