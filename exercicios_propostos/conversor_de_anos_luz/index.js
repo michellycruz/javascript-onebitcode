@@ -9,11 +9,11 @@ switch(opcao){
         alert(LightYear + " LY" + " = " + parsec + " PC")
         break
     case "2":
-        let UnidadeAstronomica = LightYear * 632411
+        let UnidadeAstronomica = LightYear * 63241.1
         alert(LightYear + " LY" + " = " + UnidadeAstronomica + " UA")
         break
     case "3":
-        let quilometro = LightYear * (9.5 * Math.pow(10, 12))
+        let quilometro = LightYear * 9.5 * Math.pow(10, 12)
         alert(LightYear + " LY" + " = " + quilometro + " KM")
         break
     case "4":
