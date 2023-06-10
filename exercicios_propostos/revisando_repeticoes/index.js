@@ -1,11 +1,12 @@
 let nave = prompt("Informe o nome da nave")
-let palavraInvertida = ""
+let nomeInvertido = ""
 
-for(let i = nave.length - 1; i >= 0 ; i--){
-    palavraInvertida += nave[i];
-    if(nave[i] === "e"){
-        break;
+for(let i = nave.length - 1 ; i >= 0 ; i--){
+    if(nave[i] == "e"){
+        break
     }
+    nomeInvertido += nave[i]
 }
 
-alert("Palavra original: " + nave + "\nPalavra invertida: " + palavraInvertida)
+
+alert("Nome da nave: " + nave + "\nNome invertido: " + nomeInvertido)
