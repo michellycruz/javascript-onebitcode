@@ -1,5 +1,5 @@
 let dobra = 0
-let opcao
+let opcao = ""
 
 let nave = prompt("Bem vindo ao sistema de navegação para astronautas, por favor, digite o nome da nave em que vai realizar a viagem")
 alert("Astronautas, estão preparados para a viagem?")
