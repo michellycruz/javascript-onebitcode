@@ -7,9 +7,9 @@ const hitchedSpaceships = [
 ];
 
 let maisde9Tripulantes = hitchedSpaceships.filter(nave => {
-    return nave[1] > 9
+    return nave[1] > 9  
 }).map(nave => {
-    return spaceship[0]
+    return nave[0]
 })
 
 let engatePendente = hitchedSpaceships.findIndex(nave =>{
