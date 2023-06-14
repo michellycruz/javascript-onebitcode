@@ -21,7 +21,7 @@ function addContact(){
     phoneInput.type = 'text'
     phoneInput.name = 'phone'
     phoneLi.appendChild(phoneInput) //colocando o input dentro da lista
-    ul.appendChild(phoneLi)  //obs: ctrl d seleciona vários elementos com o mesmo nome
+    ul.appendChild(phoneLi)  
     ul.appendChild(document.createElement('br'))
 
     const addressLi = document.createElement('li')
@@ -45,3 +45,5 @@ function removeContact(){
     contactSection.removeChild(titles[titles.length - 1]) //remove um filho
     contactSection.removeChild(contacts[contacts.length - 1])
 }
+
+//obs: ctrl d seleciona vários elementos com o mesmo nome
