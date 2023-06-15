@@ -3,20 +3,22 @@
 
 */
 
-let carro1 = prompt("Qual o nome do primeiro veículo?")
-let velcarro1 = prompt("Qual a velocidade dele?")
+let veiculo1 = (prompt("Qual o nome do primeiro veículo?"))
+let velVeiculo1 = parseFloat(prompt("Qual a velocidade dele?"))
 
-let carro2 = prompt("Qual o nome do segundo veículo?")
-let velcarro2 = prompt("Qual a velocidade dele?")
+let veiculo2 = (prompt("Qual o nome do segundo veículo?"))
+let velVeiculo2 = parseFloat(prompt("Qual a velocidade dele?"))
 
-if (velcarro1 > velcarro2){
-
-    alert(carro1 + " é mais rápido que " + carro2);
-
-} else if (velcarro2 > velcarro1) {
-
-    alert(carro2 + " é mais rápido que " + carro1);
-
-} else {
-    alert("A " + " velocidade do " + carro1 + " e a do " + carro2 + " são iguais");
-}
+    if(velVeiculo1 > velVeiculo2){
+        alert("O veículo " + veiculo1 + " é mais rápido que o veículo " + veiculo2 +
+        "\n\n" + veiculo2 + ": " + velVeiculo2 + "km" +
+        "\n" + veiculo1 + ": " + velVeiculo1 + "km")
+    } else if(velVeiculo1 < velVeiculo2){
+        alert("O veículo " + veiculo2 + " é mais rápido que o veículo " + veiculo1 +
+        "\n\n" + veiculo2 + ": " + velVeiculo2 + "km" +
+        "\n" + veiculo1 + ": " + velVeiculo1 + "km")
+    } else {
+        alert("Ambos tem a mesma velocidade " +
+        "\n\n" + veiculo2 + ": " + velVeiculo2 + "km" +
+        "\n" + veiculo1 + ": " + velVeiculo1 + "km")
+    }
