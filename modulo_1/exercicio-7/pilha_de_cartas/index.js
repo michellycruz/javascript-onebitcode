@@ -3,37 +3,28 @@
 
 */
 
-const baralho = []
-let opcao
+let baralho = []
+let opcao = ""
 
-    do {
+    do{
         opcao = prompt("Cartas no baralho: " + baralho.length +
-        "\n1 - Adicionar carta" + "\n2 - Puxar uma carta" + "\n3 - Sair")
+        "\n\nO que deseja fazer?" + "\n1 - Adicionar uma carta" + "\n2 - Puxar uma carta" + "\n3 - Sair")
 
         switch(opcao){
             case "1":
-                const novaCarta = prompt("Qual carta você gostaria de adicionar?")
-                baralho.push(novaCarta)
-
+                let cartaAdicionada = prompt("Qual carta gostaria de adicionar ao baralho?")
+                baralho.push(cartaAdicionada)
                 break
-
             case "2":
-                const cartaPuxada  = baralho.pop()
+                let cartaPuxada = baralho.pop()
+
                 if(!cartaPuxada){
                     alert("Não há nenhuma carta no baralho")
                 } else{
-                    alert("A carta " + cartaPuxada + " foi puxada do baralho")
+                    alert("A carta " + cartaPuxada + " foi retirada do baralho")
                 }
-
                 break
-
             case "3":
-                alert("Finalizando o programa...")
-
-                break
-
-            default:
-                alert("Opção inválida")
+                "Finalizando..."
         }
-
-    } while (opcao !== "3")
+    }while(opcao != "3")
