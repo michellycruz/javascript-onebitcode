@@ -17,7 +17,6 @@ let opcao = ""
                 break
             case "2":
                 let cartaPuxada = baralho.pop()
-
                 if(!cartaPuxada){
                     alert("Não há nenhuma carta no baralho")
                 } else{
