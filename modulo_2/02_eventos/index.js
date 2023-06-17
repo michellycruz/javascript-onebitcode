@@ -1,19 +1,15 @@
 function onMouseEnter(){
-    console.log('Entrada do mouse')
+    console.log("O mouse entrou")
 }
-
 function onChange(){
-    console.log('Mudança no valor')
+    console.log("O valor mudou")
 }
-
 function onFocus(){
-    console.log('foco no elemento')
+    console.log("Entrada de foco")
 }
-
 function onBlur(){
-    console.log('desfocado o elemento')
+    console.log("Desfocou")
 }
-
 function onClick(){
-    console.log('clicou no botão')
+    console.log("Clicou no botão")
 }
