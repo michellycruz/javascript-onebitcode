@@ -1,3 +1,14 @@
+<!--Construa uma página web que permita montar a escalação de um time de jogadores. Nele deverá ser possível: 
+    - Escalar um jogador     
+    - Informar a posição do jogador a ser escalado para o time.     
+    - Informar o nome do jogador.     
+    - Informar o número da camisa.     
+    - Ter um botão “Escalar” que pergunta ao usuário se ele deseja confirmar a escalação daquele jogador e então insere as informações em uma lista na página.     
+    - Após o jogador ser escalado os campos de texto devem ser limpos. 
+    - Remover um jogador     
+    - Informar o número da camisa do jogador.     
+    - Ter um botão “Remover” que pergunta ao usuário se ele deseja confirmar a remoção daquele jogador e então exclui ele da lista na página.     - Após o jogador ser removido o campo de texto deve ser limpo. Dica: lembrando que é possível acessar o texto de um input através da propriedade value.-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,6 +18,31 @@
 </head>
 <body>
     <h1>Escalação do time</h1>
+    <h2>Escalar Jogador</h2>
+    <p>
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome">
+    </p>
+    <p>
+        <label for="posicao">Posição: </label>
+        <input type="text" name="posicao" id="posicao">
+    </p>
+    <p>
+        <label for="numeroCamisa">Número da camisa: </label>
+        <input type="text" name="numeroCamisa" id="numeroCamisa">
+    </p>
+    <button onclick="addPlayer()">Escalar</button>
+    <hr>
+    <h2>Remover jogador</h2>
+    <p>
+        <label for="removerJogador">Número da camisa</label>
+        <input type="text" name="removerJogador" id="removerJogador">
+    </p>
+    <button onclick="removePlayer()">Remover</button>
+    <hr>
+    <h1>Time</h1>
+    <ul id="teamList"></ul>
+
     <script src="index.js"></script>
 </body>
 </html>
