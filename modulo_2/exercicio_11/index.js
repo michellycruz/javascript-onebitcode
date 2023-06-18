@@ -16,7 +16,7 @@ function addPlayer(){
   const posicao = document.getElementById('posicao').value
   const numeroCamisa = document.getElementById('numeroCamisa').value
 
-  const confirmation = confirm("Escalar " + nome + " como " + posicao + "?")
+  const confirmation = confirm('Deseja escalar ' + nome + ' como ' + posicao + '?')
 
   if(confirmation){
     const teamList = document.getElementById('teamList')
@@ -25,8 +25,8 @@ function addPlayer(){
     playerItem.innerText = posicao + ": " + nome + " (" + numeroCamisa + ")"
     teamList.appendChild(playerItem)
 
-    document.getElementById('posicao').value = ''
     document.getElementById('nome').value = ''
+    document.getElementById('posicao').value = ''
     document.getElementById('numeroCamisa').value = ''
   }
 }
