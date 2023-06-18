@@ -15,25 +15,30 @@ function addPlayer(){
   const nome = document.getElementById('nome').value
   const posicao = document.getElementById('posicao').value
   const numeroCamisa = document.getElementById('numeroCamisa').value
-  console.log(nome, posicao, numeroCamisa)
 
-  const ul = document.getElementById('teamList')
+  const confirmation = confirm("Escalar " + nome + " como " + posicao + "?")
 
-  const jogador = document.createElement('h3')
-  jogador.className = 'list-item'
-  jogador.innerText = 'Jogador'
-  const newLiNome = document.createElement('li')
-  newLiNome.className = 'list-item'
-  newLiNome.innerText = 'Nome: ' + nome
-  const newLiPosicao = document.createElement('li')
-  newLiPosicao.className = 'list-item'
-  newLiPosicao.innerText = 'Posicao: ' + posicao
-  const newLiNumero = document.createElement('li')
-  newLiNumero.className = 'list-item'
-  newLiNumero.innerText = 'Numero: ' + numeroCamisa
+  if(confirmation){
+    const teamList = document.getElementById('teamList')
+    const playerItem = document.createElement('li')
+    playerItem.id = 'player-' + numeroCamisa
+    playerItem.innerText = posicao + ": " + nome + " (" + numeroCamisa + ")"
+    teamList.appendChild(playerItem)
 
-  ul.appendChild(newLiNome)
-  ul.appendChild(newLiPosicao)
-  ul.appendChild(newLiNumero)
-  jogador.appendChild(ul)
+    document.getElementById('posicao').value = ''
+    document.getElementById('nome').value = ''
+    document.getElementById('numeroCamisa').value = ''
+  }
+}
+
+function removePlayer(){
+  const numeroCamisa = document.getElementById('removerJogador').value
+  const playerToRemove = document.getElementById('player-' + numeroCamisa)
+
+  const confirmation = confirm('Remover o jogador ' + playerToRemove.innerText + '?')
+
+  if (confirmation){
+    playerToRemove.remove()
+    document.getElementById('removerJogador').value = ''
+  }
 }
