@@ -6,6 +6,11 @@
     <title>Enviando Valores do DOM para o Javascript</title>
     <script src="index.js"></script>
 </head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
 <body>
     <h1>Enviando Valores do DOM para o Javascript</h1>
     <hr>
@@ -20,7 +25,8 @@
         <br>
         <label for="passwordConfirmation">Confirme sua senha:</label>
         <input type="password" name="passwordConfirmation" id="passwordConfirmation">
-        <button onclick="">Registrar</button>
+        <br>
+        <button onclick="register(this.parentNode)">Registrar</button> //usado para acessar o nó pai (section)
     </section>
 </body>
 </html>
