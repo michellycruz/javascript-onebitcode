@@ -9,52 +9,61 @@
     <h1>Trabalhando Com Formulários</h1>
     <hr>
     <h3>Montar Pedido</h3>
-    <form action="">
+    <form id="orderForm">
         <p>
             <label for="name">Nome:</label>
             <br>
             <input type="text" name="name" id="name">
         </p>
         <p>
-            <label for="endereco">Endereço de Entrega</label>
+            <label for="adress">Endereço de Entrega</label>
             <br>
-            <input type="text" name="endereco" id="endereco">
+            <input type="text" name="adress" id="adress">
         </p>
         <p>
-            <label for="tipoDePao">Tipo de Pão</label>
+            <label for="breadType">Tipo de Pão</label>
             <br>
-            <select name="tipoDePao" id="tipoDePao">
-                <option value="opcao">Selecione uma opção</option>
+            <select name="breadType" id="breadType">
+                <option selected disabled">Selecione uma opção</option>
+                <option value="3 queijos">3 queijos</option>
+                <option value="Parmesão e orégano">Parmesão e orégano</option>
+                <option value="9 grãos">9 grãos</option>
+                <option value="Italiano branco">Italiano branco</option>
+                <option value="Granola salgada">Granola salgada</option>
+                <option value="Manteiga temperada">Manteiga temperada</option>
             </select>
         </p>
         <p>
-            Principal:
+            <label for="main">Principal:</label>
             <br>
-            <input type="radio" name="carne" id="carne">
+            <input type="radio" name="main" id="carne">
             <label for="carne">Carne</label>
-            <input type="radio" name="frango" id="frango">
+            <input type="radio" name="main" id="frango">
             <label for="frango">Frango</label>
-            <input type="radio" name="vegano" id="vegano">
+            <input type="radio" name="main" id="vegano">
             <label for="vegano">Vegano</label>
         </p>
         <p>
-            Salada:
+            <label for="salad">Salada:</label>
             <br>
-            <input type="checkbox" name="alface" id="alface">
+            <input type="checkbox" name="salad" id="alface">
             <label for="alface">Alface</label>
-            <input type="checkbox" name="tomate" id="tomate">
+            <input type="checkbox" name="salad" id="tomate">
             <label for="tomate">Tomate</label>
-            <input type="checkbox" name="azeitonas" id="azeitonas">
+            <input type="checkbox" name="salad" id="azeitonas">
             <label for="azeitonas">Azeitonas</label>
-            <input type="checkbox" name="cenoura" id="cenoura">
+            <input type="checkbox" name="salad" id="cenoura">
             <label for="cenoura">Cenoura</label>
-            <input type="checkbox" name="picles" id="picles">
+            <input type="checkbox" name="salad" id="picles">
             <label for="picles">Picles</label>
         </p>
         <p>
-            Observações:
-            inp
+            <label for="observations">Observações:</label>
+            <br>
+            <textarea name="observations" id="observations" cols="30" rows="6"></textarea>
         </p>
+        <button type="submit">Fechar Pedido</button>
     </form>
+    <script src="index.js"></script>
 </body>
 </html>
