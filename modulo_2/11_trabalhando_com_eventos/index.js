@@ -20,3 +20,7 @@ function removeListener(){
     button.removeEventListener('click', register)
     alert('Event removed')
 }
+
+button.addEventListener('mouseover', function (ev){
+    console.log(ev.currentTarget)
+})
