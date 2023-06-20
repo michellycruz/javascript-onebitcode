@@ -53,7 +53,11 @@ function newTechnology(){
         technologyContainer.appendChild(experienceLabel)
         technologyContainer.appendChild(experienceGroup)
         technologyContainer.appendChild(removeButton)
-        }
+
 
         //Adiciona a nova linha de tecnologia ao formulário
         form.appendChild(technologyContainer)
+        }
+
+
+
