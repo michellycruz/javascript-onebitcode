@@ -27,7 +27,33 @@ function newTechnology(){
         experienceLabel.innerText = 'Tempo de Experiência: '
 
         const experienceOptions = ['0-2 anos', '3-4 anos', '+5 anos']
-        ex
+        experienceOptions.forEach(function(option){
+            const optionLabel = document.createElement('label')
+            const optionInput = document.createElement('input')
+            optionLabel.innerText = option
+            optionInput.type = 'radio'
+            optionInput.name = 'experience'
+            optionInput.value = option
 
-        form.appendChild(technologyLabel, technologyInput)
-}
+            //input de tempo de experiencia na div de opção
+            experienceGroup.appendChild(optionInput)
+            experienceGroup.append(optionLabel)
+        })
+
+        const removeButton = document.createElement('button')
+        removeButton.innerText = 'Remover'
+        removeButton.addEventListener('click', function(){
+                    //remove a linha de tecnologia
+                    form.removeChild(technologyContainer)
+                })
+
+        //Adiciona os elementos à nova linha de tecnologia
+        technologyContainer.appendChild(technologyLabel)
+        technologyContainer.appendChild(technologyInput)
+        technologyContainer.appendChild(experienceLabel)
+        technologyContainer.appendChild(experienceGroup)
+        technologyContainer.appendChild(removeButton)
+        }
+
+        //Adiciona a nova linha de tecnologia ao formulário
+        form.appendChild(technologyContainer)
