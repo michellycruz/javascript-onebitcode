@@ -8,3 +8,26 @@ Construa uma página web que permita cadastrar desenvolvedores, suas tecnologias
 
 Para esse exercício você deve utilizar apenas eventos adicionados via javascript e a página deve funcionar sem acionar um recarregamento.
 */
+ 
+function newTechnology(){
+        const form = document.getElementById('form')
+
+        //criação dos elementos
+        const technologyContainer = document.createElement('div');
+        const technologyLabel = document.createElement('label')
+        const technologyInput = document.createElement('input')
+        const experienceLabel = document.createElement('label')
+        const experienceGroup = document.createElement('div')
+
+        //definição dos atributos e conteúdos dos elementos
+        technologyLabel.innerText = 'Tecnologia: '
+        technologyInput.type = 'text'
+        technologyLabel.name = 'technology'
+
+        experienceLabel.innerText = 'Tempo de Experiência: '
+
+        const experienceOptions = ['0-2 anos', '3-4 anos', '+5 anos']
+        ex
+
+        form.appendChild(technologyLabel, technologyInput)
+}
