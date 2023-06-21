@@ -43,11 +43,11 @@ function newTechnology(){
         const removeButton = document.createElement('button')
         removeButton.innerText = 'Remover'
         removeButton.addEventListener('click', function(){
-                    //remove a linha de tecnologia
+
                     form.removeChild(technologyContainer)
                 })
 
-        //Adiciona os elementos à nova linha de tecnologia
+
         technologyContainer.appendChild(technologyLabel)
         technologyContainer.appendChild(technologyInput)
         technologyContainer.appendChild(experienceLabel)
@@ -55,7 +55,7 @@ function newTechnology(){
         technologyContainer.appendChild(removeButton)
 
 
-        //Adiciona a nova linha de tecnologia ao formulário
+
         form.appendChild(technologyContainer)
         }
 
