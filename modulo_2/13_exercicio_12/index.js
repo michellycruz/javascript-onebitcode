@@ -9,55 +9,28 @@ Construa uma página web que permita cadastrar desenvolvedores, suas tecnologias
 Para esse exercício você deve utilizar apenas eventos adicionados via javascript e a página deve funcionar sem acionar um recarregamento.
 */
  
-function newTechnology(){
-        const form = document.getElementById('form')
+function createLabel (text, htmlFor){
+    const label = document.createElement('label')
+    label.htmlFor = htmlFor
+    label.innerText = text
+    return label
+}
 
-        //criação dos elementos
-        const technologyContainer = document.createElement('div');
-        const technologyLabel = document.createElement('label')
-        const technologyInput = document.createElement('input')
-        const experienceLabel = document.createElement('label')
-        const experienceGroup = document.createElement('div')
+function createInput(id, value, name, type = 'text', placeholder = ''){
+    const input = document.createElement('input')
+    input.id = id
+    input.value = value
+    input.name = name
+    input.type = type
+    input.placeholder = placeholder
+    return input
+}
 
-        //definição dos atributos e conteúdos dos elementos
-        technologyLabel.innerText = 'Tecnologia: '
-        technologyInput.type = 'text'
-        technologyLabel.name = 'technology'
+const form = document.getElementById('form')
+const addTechBtn = document.getElementById('addTechBtn')
+const developers = []
+let inputRows = 0
 
-        experienceLabel.innerText = 'Tempo de Experiência: '
-
-        const experienceOptions = ['0-2 anos', '3-4 anos', '+5 anos']
-        experienceOptions.forEach(function(option){
-            const optionLabel = document.createElement('label')
-            const optionInput = document.createElement('input')
-            optionLabel.innerText = option
-            optionInput.type = 'radio'
-            optionInput.name = 'experience'
-            optionInput.value = option
-
-            //input de tempo de experiencia na div de opção
-            experienceGroup.appendChild(optionInput)
-            experienceGroup.append(optionLabel)
-        })
-
-        const removeButton = document.createElement('button')
-        removeButton.innerText = 'Remover'
-        removeButton.addEventListener('click', function(){
-
-                    form.removeChild(technologyContainer)
-                })
-
-
-        technologyContainer.appendChild(technologyLabel)
-        technologyContainer.appendChild(technologyInput)
-        technologyContainer.appendChild(experienceLabel)
-        technologyContainer.appendChild(experienceGroup)
-        technologyContainer.appendChild(removeButton)
-
-
-
-        form.appendChild(technologyContainer)
-        }
-
-
-
+addTechBtn.addEventListener('click', function(ev){
+    const stackInputs = document.getElementById(stackInputs)
+})
