@@ -33,4 +33,7 @@ let inputRows = 0
 
 addTechBtn.addEventListener('click', function(ev){
     const stackInputs = document.getElementById(stackInputs)
+
+    const newRow = document.createElement('li')
+    const rowIndex = inputRows
 })
