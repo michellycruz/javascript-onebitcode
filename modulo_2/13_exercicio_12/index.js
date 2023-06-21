@@ -36,4 +36,7 @@ addTechBtn.addEventListener('click', function(ev){
 
     const newRow = document.createElement('li')
     const rowIndex = inputRows
+    inputRows++
+    newRow.id = 'inputRow-' + rowIndex
+    newRow.className = 'inputRow'
 })
