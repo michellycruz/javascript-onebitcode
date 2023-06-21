@@ -7,7 +7,7 @@
 </head>
 <style>
     body{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: Arial, Helvetica, sans-serif
     }
 </style>
 <body>
@@ -16,13 +16,17 @@
     </header>
     <hr>
     <section>
-        <p>
-            <label for="nome">Nome completo:</label>
-            <input type="text" name="nome" id="nome">
-        </p>
-        <h2>Tecnologias</h2>
-        <button onclick="newTechnology()">Adicionar Tecnologia</button>
+        <h2>Cadastrar Novo Desenvolvedor</h2>
         <form id="form">
+            <p>
+                <label for="nome">Nome completo:</label>
+                <input type="text" name="nome" id="nome">
+            </p>
+            <h4>Tecnologias:</h4>
+            <button id="addTechBtn" type="button">Adicionar Tecnologia</button>
+            <ul id="stackInputs"></ul>
+            <br>
+            <button type="submit">Cadastrar</button>
         </form>
     </section>
     <script src="index.js"></script>
