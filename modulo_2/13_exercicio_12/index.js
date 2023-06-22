@@ -72,5 +72,24 @@ form.addEventListener('submit', function(ev){
     ev.preventDefault()
 
     const fullnameInput = document.getElementById('fullname')
-    const inputRows = document.querySelectorAll()
+    const inputRows = document.querySelectorAll('.inputRow')
+
+    let technologies = []
+    inputRows.forEach(function(row){
+        //#rowId input[name="techName"]
+        const techName = document.querySelector('#' + row.id + ' input[name="techName"]').value
+        const techExp = document.querySelector('#' + row.id + ' input[type="radio"]:checked').value
+        technologies.push({name: techName, exp: techExp})
+    })
+
+    const newDev = { fullname: fullnameInput.value, technologies: technologies}
+    developers.push(newDev)
+    alert('Dev cadastrado com sucesso!')
+
+    fullnameInput.value = ''
+    inputRows.forEach(function(row){
+        row.remove()
+    })
+
+    console.log(developers)
 })
