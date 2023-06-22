@@ -67,3 +67,10 @@ addTechBtn.addEventListener('click', function(ev){
 
     stackInputs.appendChild(newRow)
 })
+
+form.addEventListener('submit', function(ev){
+    ev.preventDefault()
+
+    const fullnameInput = document.getElementById('fullname')
+    const inputRows = document.querySelectorAll()
+})
