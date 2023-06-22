@@ -43,6 +43,9 @@ addTechBtn.addEventListener('click', function(ev){
     const techNameLabel = createLabel('Nome: ', 'techName-' + rowIndex)
     const techNameInput = createInput('techName-' + rowIndex, null, 'techName')
 
+    const expLabel = createLabel('Experiência: ')
+    const expRadio1 = 
+
     newRow.append(
         techNameLabel, techNameInput
     )
