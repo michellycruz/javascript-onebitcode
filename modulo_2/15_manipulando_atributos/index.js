@@ -16,3 +16,7 @@ document.getElementById('type').addEventListener('click', function(){
 document.getElementById('placeholder').addEventListener('click', function(){
     input.placeholder = 'Digite algo...'
 })
+
+document.getElementById('disable').addEventListener('click', function(){
+    input.setAttribute('disabled', !input.disabled)
+})
