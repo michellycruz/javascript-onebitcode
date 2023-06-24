@@ -20,3 +20,10 @@ document.getElementById('placeholder').addEventListener('click', function(){
 document.getElementById('disable').addEventListener('click', function(){
     input.setAttribute('disabled', !input.disabled)
 })
+
+document.getElementById('data').addEventListener('click', function(){
+    const data = input.dataset.something
+    console.log('O valor do atributo data-something é: ' + data)
+    input.dataset.something = 'Algum outro valor'
+    console.log('O valor do atributo data-something agora é: ' + input.dataset.something)
+})
