@@ -8,5 +8,12 @@ function useDarkTheme(){
     document.body.style.backgroundColor = '#212529'
 }
 
+function switchTheme(){
+    document.body.classList.toggle('is-light')
+    document.body.classList.toggle('is-dark')
+    //alternar
+}
+
 document.getElementById('lightBtn').addEventListener('click', useLightTheme)
 document.getElementById('darkBtn').addEventListener('click', useDarkTheme)
+document.getElementById('switchBtn').addEventListener('click', switchTheme)
