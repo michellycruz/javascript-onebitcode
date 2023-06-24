@@ -22,8 +22,8 @@ document.getElementById('disable').addEventListener('click', function(){
 })
 
 document.getElementById('data').addEventListener('click', function(){
-    const data = input.dataset.something
-    console.log('O valor do atributo data-something é: ' + data)
-    input.dataset.something = 'Algum outro valor'
-    console.log('O valor do atributo data-something agora é: ' + input.dataset.something)
+    const data = input.dataset.somethingElse
+    console.log('O valor do atributo data-something-else é: ' + data)
+    input.dataset.somethingElse = 'Algum outro valor'
+    console.log('O valor do atributo data-something-else agora é: ' + input.dataset.somethingElse)
 })
