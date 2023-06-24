@@ -8,7 +8,11 @@ document.getElementById('value').addEventListener('click', function(){
 })
 
 document.getElementById('type').addEventListener('click', function(){
-   // input.type = input.type !== 'date' ? 'date' : 'text'
+    input.type = input.type !== 'date' ? 'date' : 'text'
     // ? > if   : > else
-    input.setAttribute('type', 'radio')
+    //input.setAttribute('type', 'radio')
+})
+
+document.getElementById('placeholder').addEventListener('click', function(){
+    input.placeholder = 'Digite algo...'
 })
