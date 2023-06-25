@@ -16,3 +16,18 @@
     --primary-color: #4dff91;
     --error-color: #ff0043;
   }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-family: "Ubuntu", sans-serif;
+  }
+  
+  main {
+    display: block;
+    margin: 0 auto;
+    max-width: 40rem;
+    padding: 0 1.5rem 2.5rem;
+    position: relative;
+  }
+  
