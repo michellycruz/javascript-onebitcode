@@ -3,7 +3,7 @@ const root = document.querySelector(':root')
 const input = document.getElementById('input')
 const result = document.getElementById('result')
 
-const alloedKeys = ["(", ")", "/", "*", "-", "+", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0", ".", "%", " "]
+const allowedKeys = ["(", ")", "/", "*", "-", "+", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0", ".", "%", " "]
 
 document.querySelectorAll('.charKey').forEach(function (charKeyBtn){
     charKeyBtn.addEventListener('click', function(){
@@ -19,7 +19,7 @@ document.getElementById('clear').addEventListener('click', function(){
 
 input.addEventListener('keydown', function (ev){
     ev.preventDefault()
-    if (alloedKeys.includes(ev.key)){
+    if (allowedKeys.includes(ev.key)){
         input.value += ev.key
         return
     }
