@@ -21,11 +21,13 @@ h1{
 }
 
 .container2{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
     width: 55vmin;
     display: flex;
     flex-wrap: wrap;
-    gap: 2vmin;
-    padding: 20px;
 }
 
 .button-option{
@@ -34,5 +36,7 @@ h1{
     font-size: 17vmin;
 }
 
-
+.reset{
+    padding: 10px;
+}
 
