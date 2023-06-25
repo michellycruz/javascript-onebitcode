@@ -20,7 +20,6 @@
   body {
     background-color: var(--bg-color);
     color: var(--font-color);
-    font-family: "Ubuntu", sans-serif;
   }
   
   main {
@@ -29,5 +28,20 @@
     max-width: 40rem;
     padding: 0 1.5rem 2.5rem;
     position: relative;
+  }
+
+  header {
+    padding: 2rem 0;
+  }
+  
+  #themeSwitcher {
+    background-color: var(--bg-color);
+    border: .125rem solid var(--font-color);
+    color: var(--font-color);
+  }
+  
+  #themeSwitcher:hover {
+    background-color: var(--font-color);
+    color: var(--bg-color);
   }
   
