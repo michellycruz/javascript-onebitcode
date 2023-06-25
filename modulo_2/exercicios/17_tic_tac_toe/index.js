@@ -14,7 +14,7 @@ function start(){
     const player1 = document.getElementById('player1').value 
     const player2 = document.getElementById('player2').value 
 
-    if (player1.trim() === '' || player2.trim() === ''){
+    if (player1 === '' || player2 === ''){
         alert('Por favor, insira os nomes dos jogadores.')
         return
     }
