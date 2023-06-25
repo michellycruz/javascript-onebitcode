@@ -34,8 +34,13 @@ input.addEventListener('keydown', function (ev){
 document.getElementById('equal').addEventListener('click', calculate)
 
 function calculate(){
+    resultInput.value = 'ERROR'
+    resultInput.classList.add('error')
+    
     const result = eval(input.value) //eval = avaliar //cuidado ao usar o eval
+    
     resultInput.value = result
+    resultInput.classList.remove('error')
 }
 
 document.getElementById('copyToClipboard').addEventListener('click', function(ev){
@@ -43,7 +48,10 @@ document.getElementById('copyToClipboard').addEventListener('click', function(ev
     if(button.innerText === 'Copy'){
         button.innerText = 'Copied!'
         button.classList.add('success')
-        
+        navigator.clipboard.writeText(resultInput.value)  //copiar para a área de transferência
+    } else{
+        button.innerText = 'Copy'
+        button.classList.remove('success')
     }
 })
 
