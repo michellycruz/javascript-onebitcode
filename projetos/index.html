@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,13 +12,13 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <main>
-        <header>
+    <main data-theme="dark">
+        <header class="flex align-center justify-between">
             <h1>Calc.js</h1>
-            <button>Switch Theme Dark/light</button>
+            <button id="themeSwitcher">Switch Theme Dark/light</button>
         </header>
         <input type="text" id="input">
-        <div>
+        <div id="keys">
             <button id="clear">C</button>
             <button class="charKey" data-value=" ( ">(</button>
             <button class="charKey" data-value=" ) ">)</button>
@@ -39,7 +40,10 @@
             <button class="charKey" data-value=" % ">mod</button>
             <button id="equal">=</button>
         </div>
+        <section class="flex align-center justify-between">
+            <button id="copyToClipboard">Copy</button>
+            <input type="text" id="result" disabled>
+        </section>
     </main>
-
 </body>
 </html>
