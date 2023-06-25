@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>TIC TAC TOE</h1>
+    </header>
+    <section class="container1" id="formSection">
+        <form action="players">
+            <h4>Informe o nome dos jogadores</h4>
+            <p>
+                <label for="player1">Jogador 1</label>
+                <input type="text" name="player1" id="player1">
+            </p>
+            <p>
+                <label for="player2">Jogador 2</label>
+                <input type="text" name="player2" id="player2">
+            </p>
+            <p><button type="submit">Enviar</button></p>
+            <button id="startButton">Começar</button>
+        </form>
+        <main class="container2" id="gameSection">
+            <button class="button-option"></button>
+            <button class="button-option"></button>
+            <button class="button-option"></button>
+            <button class="button-option"></button>
+            <button class="button-option"></button>
+            <button class="button-option"></button>
+            <button class="button-option"></button>
+            <button class="button-option"></button>
+            <button class="button-option"></button>
+            <button class="reset">Recomeçar</button>
+        </main>
+    </section>
+</body>
+</html>

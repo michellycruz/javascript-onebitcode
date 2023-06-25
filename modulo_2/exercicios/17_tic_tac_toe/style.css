@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center
+}
+
+h1{
+    font-size: 45px;
+}
+
+.container1{
+    border: 1px solid black;
+    padding: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.container2{
+    width: 55vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmin;
+    padding: 20px;
+}
+
+.button-option{
+    height: 17vmin;
+    width: 17vmin;
+    font-size: 17vmin;
+}
+
+
+
