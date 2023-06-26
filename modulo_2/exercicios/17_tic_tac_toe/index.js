@@ -23,14 +23,16 @@ function start(){
     formSection.style.display = 'none'
     const gameSection = document.getElementById('gameSection')
     gameSection.style.display = 'block'
+
+    addPlayers(player1, player2)
 }
 
-function addPlayers(){
-    const ul = document.getElementById('players')
+function addPlayers(player1, player2){
+    const section = document.getElementById('gameSection')
 
-    const newLi = document.createElement('li')
-    newLi.className = 'list-item'
-    newLi.innerText = player1 + ' versus ' + player2
+    const newH3 = document.createElement('h3')
+    newH3.className = 'list-item'
+    newH3.innerText = player1 + ' versus ' + player2
 
-    ul.appendChild(newLi)
+    section.insertBefore(newH3, section.firstChild);
 }
