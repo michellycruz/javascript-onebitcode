@@ -1,3 +1,21 @@
+const vBoard = []
+let btnRef = document.querySelectorAll('.button-option')
+let turnPlayer = ''
+
+let winning = [
+    [0, 1, 2],
+    [0, 3, 6],
+    [2, 5, 8],
+    [6, 7, 9],
+    [3, 4, 5],
+    [1, 4, 7],
+    [0, 4, 8],
+    [2, 4, 6]
+]
+
+let xTurn = true;
+let count = 0;
+
 function gameSection(){
     const gameSection = document.getElementById('gameSection')
     gameSection.style.display = 'none'
@@ -29,10 +47,5 @@ function start(){
 
 function addPlayers(player1, player2){
     const section = document.getElementById('gameSection')
-
-    const newH3 = document.createElement('h3')
-    newH3.className = 'list-item'
-    newH3.innerText = player1 + ' versus ' + player2
-
-    section.insertBefore(newH3, section.firstChild);
 }
+
