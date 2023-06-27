@@ -1,20 +1,11 @@
+const boardRegions = document.querySelectorAll('#gameBoard span')
 const vBoard = []
-let btnRef = document.querySelectorAll('.button-option')
 let turnPlayer = ''
 
-let winning = [
-    [0, 1, 2],
-    [0, 3, 6],
-    [2, 5, 8],
-    [6, 7, 9],
-    [3, 4, 5],
-    [1, 4, 7],
-    [0, 4, 8],
-    [2, 4, 6]
-]
-
-let xTurn = true;
-let count = 0;
+function updateTitle(){
+    const playerInput = document.getElementById(turnPlayer)
+    document.getElementById('turnPlayer').innerText = playerInput.value
+}
 
 function gameSection(){
     const gameSection = document.getElementById('gameSection')
