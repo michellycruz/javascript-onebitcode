@@ -1,4 +1,3 @@
-const boardRegions = document.querySelectorAll('#gameBoard span')
 const vBoard = []
 let turnPlayer = ''
 
