@@ -1,5 +1,22 @@
-const vBoard = []
 let turnPlayer = ''
+let btnRef = document.querySelectorAll('.button-option')
+let restartBtn = document.getElementById('reset')
+
+let winningPattern = [
+
+    [0, 1, 2],
+    [0, 3, 6],
+    [2, 5, 8],
+    [6, 7, 8],
+    [3, 4, 5],
+    [1, 4, 7],
+    [0, 4, 8],
+    [2, 4, 6]
+
+]
+
+let xTurn = true;
+let count = 0
 
 function updateTitle(){
     const playerInput = document.getElementById(turnPlayer)
@@ -35,7 +52,44 @@ function start(){
     addPlayers(player1, player2)
 }
 
+const disableButtons = () => {
+    btnRef.forEach((element) => (element.disabled = true))
+}
+
+const enableButtons = () => {
+    btnRef.forEach ((element) => {
+        element.innerText = ''
+        element.disabled = false
+    })
+}
+
+//resetar jogo
+restartBtn.addEventListener('click', () => {
+    count = 0
+    enableButtons();
+})
+
 function addPlayers(player1, player2){
     const section = document.getElementById('gameSection')
 }
+
+btnRef.forEach((element) => {
+    element.addEventListener('click', () => {
+        if (xTurn){
+            element.innerText= 'X'
+            element.disabled = true
+        } else{
+            xTurn = true
+            element.innerText='O'
+            element.disabled = true
+        }
+        count += 1
+        if (count == 9){
+            drawFunction()
+        }
+        winCheker()
+    })
+})
+
+window.onload = enableButtons
 
