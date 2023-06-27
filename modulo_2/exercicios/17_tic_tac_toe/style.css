@@ -7,6 +7,13 @@
     text-align: center
 }
 
+body{
+    background-image: url(imagens/pikachu.jfif);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 h1{
     font-size: 45px;
 }
