@@ -51,10 +51,20 @@ function start() {
   }
 
   function handleBoardClick(ev){
-    const region = ev.currentTarget.dataset.region
+    const span = ev.currentTarget
+    const region = span.dataset.region
     const rowColumnPair = region.slit('.')
     const row = rowColumnPair[0]
     const column = rowColumnPair[1]
+    if (turnPlayer === 'player1'){
+      span.innerText = 'X'
+      vBoard[row][column] = 'X'
+    } else{
+      span.innerText = 'O'
+      vBoard[row][column] = 'O'
+    }
+    console.clear()
+    console.table()
   }
 
 document.getElementById('startButton').addEventListener('click', initializeGame)
