@@ -76,6 +76,14 @@ function start() {
     element.removeEventListener('click', handleBoardClick)
   }
 
+  function handleWin(regions){
+    regions.forEach(function(region){
+      document.querySelector('[data-region="'+ region +'"]').classList.add('win')
+    })
+    const playerName = document.getElementById(turnPlayer).value
+    document.querySelector('h2').innerHTML = playerName + ' venceu!'
+  }
+
   function handleBoardClick(ev){
     const span = ev.currentTarget
     const region = span.dataset.region
@@ -92,7 +100,16 @@ function start() {
     console.clear()
     console.table(vBoard)
     disableRegion(span)
-    const winRegions = getWinRegions
+    const winRegions = getWinRegions()
+    if (winRegions.length > 0) {
+      handleWin(winRegions)
+      console.log('VENCEU')
+    } else if (vBoard.flat().includes('')){
+      turnPlayer = turnPlayer === 'player1' ? 'player2' : 'player1'
+      updateTitle()
+    } else{
+      document.querySelector('h2').innerHTML = 'Empate!'
+    }
   }
 
 document.getElementById('startButton').addEventListener('click', initializeGame)
