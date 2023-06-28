@@ -32,7 +32,6 @@ h1{
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    width: 50vmin;
     display: flex;
     flex-wrap: wrap;
 }
