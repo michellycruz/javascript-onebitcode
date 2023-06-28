@@ -46,6 +46,7 @@ function start() {
     boardRegions.forEach(function(element){
       element.classList.remove('win')
       element.innerText = ''
+      element.classList.add('cursor-pointer')
       element.addEventListener('click', handleBoardClick)
     })
   }
@@ -72,7 +73,7 @@ function start() {
   }
 
   function disableRegion(element){
-    element.style.cursor = 'default'
+    element.classList.remove('cursor-pointer')
     element.removeEventListener('click', handleBoardClick)
   }
 
@@ -113,3 +114,4 @@ function start() {
   }
 
 document.getElementById('startButton').addEventListener('click', initializeGame)
+document.getElementById('resetButton').addEventListener('click', initializeGame)
