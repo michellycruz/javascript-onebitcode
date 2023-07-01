@@ -11,13 +11,13 @@ console.log(name, job, parents)
 const [father, mother] = parents
 console.log(father, mother)
 
-function createUser(person){
+function createUser({ name, job, parents }){
     const id = Math.floor(Math.random() * 9999)
     return {
         id,
-        name: person.name,
-        job: person.job,
-        parents: person.parents
+        name,
+        job,
+        parents
     }
 }
 
