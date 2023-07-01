@@ -1,20 +1,15 @@
 
 
-const nome = 'João';
-const idade = 25;
+const nome = 'Michelly'
+const idade = 26
 
-const mensagem = `Olá, meu nome é ${nome} e tenho ${idade} anos.`;
-
-console.log(mensagem);
-
+console.log(`Olá, me chamo ${nome}, tenho ${idade} anos`)
 
 //mensagem multilinha
 
-const mensagemMultiLinha = `
-  Olá,
-  Bem-vindo ao nosso site!
-  Esperamos que você goste da sua estadia.
-`;
+const mensagemMultilinha = `
+  Olá meu nome é Michelly,
+  tenho 26 anos
+`
 
-console.log(mensagemMultiLinha);
-
+console.log(mensagemMultilinha)
