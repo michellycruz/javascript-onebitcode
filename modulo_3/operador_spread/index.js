@@ -17,3 +17,10 @@ const townsClone = [...towns] //não é uma referência ao array antigo, cria-se
 townsClone.push('Aldebaran') 
 
 console.log({towns, townsCopy, townsClone})
+
+const townsObj = {...towns}
+const townsObjClone = {...townsObj}
+
+townsObjClone.test = 'Test'
+
+console.log({townsObj, townsObjClone})
