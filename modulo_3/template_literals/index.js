@@ -1,7 +1,7 @@
 
 
 const nome = 'Michelly'
-const idade = 26
+const idade = 25
 
 console.log(`Olá, me chamo ${nome}, tenho ${idade} anos`)
 
@@ -9,7 +9,7 @@ console.log(`Olá, me chamo ${nome}, tenho ${idade} anos`)
 
 const mensagemMultilinha = `
   Olá meu nome é Michelly,
-  tenho 26 anos
+  tenho 25 anos
 `
 
 console.log(mensagemMultilinha)
