@@ -9,3 +9,15 @@ let media = (...numbers) => {
 console.log(`Média aritmética simples: ${5, 4, 6, 8}`)
 
 //////////MÉDIA PONDERADA
+
+const mediaPonderada = (...entries) => {
+    const sum = entries.reduce((accum, { number, weight}) => accum + (number * weight), 0)
+    const weightSum = entries.reduce((accum, entry) => accum + entry.weight, 0)
+    return sum / weightSum
+}
+
+console.log(`Média Ponderada: ${mediaPonderada(
+    {number: 9, weight: 3},
+    {number: 7, weight: 1},
+    {number: 10, weight: 1},
+)}`)
