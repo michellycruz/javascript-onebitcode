@@ -21,3 +21,4 @@ console.log(`Média Ponderada: ${mediaPonderada(
     {number: 7},
     {number: 10, weight: 1},
 )}`)
+
