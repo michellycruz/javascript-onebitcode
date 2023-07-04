@@ -37,3 +37,12 @@ const median = (...numbers) => {
 
 console.log(`Mediana: ${median(2, 5, 99, 4, 42, 7)}`)
 console.log(`Mediana: ${median(15, 14, 8, 7, 3)}`)
+
+////////////////////MODA
+
+const mode = (...numbers) => {
+    const quantities = numbers.map(num => [
+        num,
+        numbers.filter(n => num === n).length
+    ])
+}
