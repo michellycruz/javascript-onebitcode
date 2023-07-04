@@ -32,4 +32,8 @@ const median = (...numbers) => {
     }
     const firstMedian = orderedNumbers[middle - 1]
     const secondMedian = orderedNumbers[middle]
+    return media(firstMedian, secondMedian)
 }
+
+console.log(`Mediana: ${median(2, 5, 99, 4, 42, 7)}`)
+console.log(`Mediana: ${median(15, 14, 8, 7, 3)}`)
