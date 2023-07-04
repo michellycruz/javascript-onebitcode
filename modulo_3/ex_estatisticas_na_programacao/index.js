@@ -22,3 +22,12 @@ console.log(`Média Ponderada: ${mediaPonderada(
     {number: 10, weight: 1},
 )}`)
 
+/////////////////MEDIANA
+
+const median = (...numbers) => {
+    const orderedNumbers = [...numbers].sort((a, b) => a - b)
+    const middle = Math.floor(orderedNumbers.length / 2)
+    if (orderedNumbers.length % 2 !== 0){
+        
+    }
+}
