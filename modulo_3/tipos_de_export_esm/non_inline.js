@@ -5,3 +5,5 @@ function group(){
 function exportDefault(){
     console.log('Export default não-inline')
 }
+
+export {group}
