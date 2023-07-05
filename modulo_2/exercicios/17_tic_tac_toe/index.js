@@ -1,41 +1,28 @@
-// Variáveis globais
-let turnPlayer = '';
-let btnRef;
+const boardRegions = document.querySelectorAll('#gameBoard span')
+let vBoard = []
+let turnPlayer = ''
 let restartBtn = document.getElementById('resetButton');
-let winningPattern = [
-  [0, 1, 2],
-  [0, 3, 6],
-  [2, 5, 8],
-  [6, 7, 8],
-  [3, 4, 5],
-  [1, 4, 7],
-  [0, 4, 8],
-  [2, 4, 6]
-];
-let xTurn = true;
-let count = 0;
 
 // Função para atualizar o título com o nome do jogador
 function updateTitle() {
   const playerInput = document.getElementById(turnPlayer);
-  document.getElementById('turnPlayer').innerText = playerInput.value;
+  document.getElementById('turnPlayer').innerText = playerInput.value
 }
 
 // Oculta a seção de jogo
 function hideGameSection() {
-  const gameSection = document.getElementById('gameSection');
-  gameSection.style.display = 'none';
+  const gameSection = document.getElementById('gameSection')
+  gameSection.style.display = 'none'
 }
 
 hideGameSection();
 
-// Event listener para o botão de começar o jogo
 document.getElementById('startButton').addEventListener('click', function(ev) {
-  ev.preventDefault();
-  start();
+  ev.preventDefault()
+  start()
 });
 
-// Função de inicialização do jogo
+// botão "começar" após do preenchimento dos nomes
 function start() {
   const player1 = document.getElementById('player1').value;
   const player2 = document.getElementById('player2').value;
@@ -49,69 +36,82 @@ function start() {
   formSection.style.display = 'none';
   const gameSection = document.getElementById('gameSection');
   gameSection.style.display = 'block';
+  }
 
-  addPlayers(player1, player2);
+  function initializeGame(){
+    vBoard = [['', '', ''], ['', '', ''], ['', '', '']]
+    turnPlayer = 'player1'
+    document.querySelector('h2').innerHTML = 'Vez de: <span id="turnPlayer"></span>'
+    updateTitle()
+    boardRegions.forEach(function(element){
+      element.classList.remove('win')
+      element.innerText = ''
+      element.classList.add('cursor-pointer')
+      element.addEventListener('click', handleBoardClick)
+    })
+  }
 
-  btnRef = document.querySelectorAll('.button-option');
-  btnRef.forEach((element) => {
-    element.addEventListener('click', (event) => {
-      if (xTurn) {
-        element.innerText = 'X';
-        element.disabled = true;
-        xTurn = false;
-      } else {
-        element.innerText = 'O';
-        element.disabled = true;
-        xTurn = true;
-      }
-      count += 1;
-      if (count === 9) {
-        drawFunction();
-      }
-      winChecker();
-    });
-    element.classList.add('button-option'); // Adiciona a classe '.button-option' aos botões
-  });
+  function getWinRegions(){
+    const winRegions = []
+    if (vBoard[0][0] && vBoard[0][0] === vBoard[0][1] && vBoard[0][0] === vBoard[0][2])
+    winRegions.push("0.0", "0.1", "0.2")
+    if (vBoard[1][0] && vBoard[1][0] === vBoard[1][1] && vBoard[1][0] === vBoard[1][2])
+      winRegions.push("1.0", "1.1", "1.2")
+    if (vBoard[2][0] && vBoard[2][0] === vBoard[2][1] && vBoard[2][0] === vBoard[2][2])
+      winRegions.push("2.0", "2.1", "2.2")
+    if (vBoard[0][0] && vBoard[0][0] === vBoard[1][0] && vBoard[0][0] === vBoard[2][0])
+      winRegions.push("0.0", "1.0", "2.0")
+    if (vBoard[0][1] && vBoard[0][1] === vBoard[1][1] && vBoard[0][1] === vBoard[2][1])
+      winRegions.push("0.1", "1.1", "2.1")
+    if (vBoard[0][2] && vBoard[0][2] === vBoard[1][2] && vBoard[0][2] === vBoard[2][2])
+      winRegions.push("0.2", "1.2", "2.2")
+    if (vBoard[0][0] && vBoard[0][0] === vBoard[1][1] && vBoard[0][0] === vBoard[2][2])
+      winRegions.push("0.0", "1.1", "2.2")
+    if (vBoard[0][2] && vBoard[0][2] === vBoard[1][1] && vBoard[0][2] === vBoard[2][0])
+      winRegions.push("0.2", "1.1", "2.0")
+    return winRegions
+  }
 
-  enableButtons();
-}
+  function disableRegion(element){
+    element.classList.remove('cursor-pointer')
+    element.removeEventListener('click', handleBoardClick)
+  }
 
-// Função para desabilitar os botões
-const disableButtons = () => {
-  btnRef.forEach((element) => {
-    element.disabled = true;
-  });
-};
+  function handleWin(regions){
+    regions.forEach(function(region){
+      document.querySelector('[data-region="'+ region +'"]').classList.add('win')
+    })
+    const playerName = document.getElementById(turnPlayer).value
+    document.querySelector('h2').innerHTML = playerName + ' venceu!'
+  }
 
-// Função para habilitar os botões
-const enableButtons = () => {
-  btnRef.forEach((element) => {
-    element.innerText = '';
-    element.disabled = false;
-  });
-};
-
-// Event listener para o botão de recomeçar o jogo
-restartBtn.addEventListener('click', () => {
-  count = 0;
-  enableButtons();
-});
-
-// Função para verificar se há um vencedor
-function winChecker() {
-  for (let i = 0; i < winningPattern.length; i++) {
-    const [a, b, c] = winningPattern[i];
-    if (
-      btnRef[a].innerText !== '' &&
-      btnRef[a].innerText === btnRef[b].innerText &&
-      btnRef[a].innerText === btnRef[c].innerText
-    ) {
-      const winner = xTurn ? document.getElementById('player1').value : document.getElementById('player2').value;
-      disableButtons();
-      alert(`O jogador ${winner} venceu!`);
-      return;
+  function handleBoardClick(ev){
+    const span = ev.currentTarget
+    const region = span.dataset.region
+    const rowColumnPair = region.split('.')
+    const row = rowColumnPair[0]
+    const column = rowColumnPair[1]
+    if (turnPlayer === 'player1'){
+      span.innerText = 'X'
+      vBoard[row][column] = 'X'
+    } else{
+      span.innerText = 'O'
+      vBoard[row][column] = 'O'
+    }
+    console.clear()
+    console.table(vBoard)
+    disableRegion(span)
+    const winRegions = getWinRegions()
+    if (winRegions.length > 0) {
+      handleWin(winRegions)
+      console.log('VENCEU')
+    } else if (vBoard.flat().includes('')){
+      turnPlayer = turnPlayer === 'player1' ? 'player2' : 'player1'
+      updateTitle()
+    } else{
+      document.querySelector('h2').innerHTML = 'Empate!'
     }
   }
-}
 
-// Função para
+document.getElementById('startButton').addEventListener('click', initializeGame)
+document.getElementById('resetButton').addEventListener('click', initializeGame)

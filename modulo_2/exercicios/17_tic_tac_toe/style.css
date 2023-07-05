@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 *{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pangolin', cursive;
     text-align: center
 }
 
@@ -32,18 +32,39 @@ h1{
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    width: 55vmin;
     display: flex;
     flex-wrap: wrap;
 }
 
-.button-option{
-    height: 17vmin;
-    width: 17vmin;
-    font-size: 17vmin;
+#gameBoard {
+    background-color: #232323;
+    display: grid;
+    grid-template-columns: 6rem 6rem 6rem;
+    grid-template-rows: 6rem 6rem 6rem;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+    max-width: 19rem;
+  }
+  
+  #gameBoard span {
+    background-color: #ddd;
+    display: grid;
+    place-content: center;
+    font-size: 5rem;
+  }
+  
+  #gameBoard span.win {
+    background-color: #25a340;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+#resetButton{
+    padding: 10px
 }
 
-.resetButton{
+#startButton{
     padding: 10px;
 }
-

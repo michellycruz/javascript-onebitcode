@@ -28,16 +28,18 @@
     </section>
         <section class="container2" id="gameSection">
             <h2>Vez de: <span id="turnPlayer"></span></h2>
-            <button class="button-option"></button>
-            <button class="button-option"></button>
-            <button class="button-option"></button>
-            <button class="button-option"></button>
-            <button class="button-option"></button>
-            <button class="button-option"></button>
-            <button class="button-option"></button>
-            <button class="button-option"></button>
-            <button class="button-option"></button>
-            <p><button class="resetButton">Recomeçar</button></p>
+            <section id="gameBoard">
+                <span class="cursor-pointer" data-region="0.0"></span>
+                <span class="cursor-pointer" data-region="0.1"></span>
+                <span class="cursor-pointer" data-region="0.2"></span>
+                <span class="cursor-pointer" data-region="1.0"></span>
+                <span class="cursor-pointer" data-region="1.1"></span>
+                <span class="cursor-pointer" data-region="1.2"></span>
+                <span class="cursor-pointer" data-region="2.0"></span>
+                <span class="cursor-pointer" data-region="2.1"></span>
+                <span class="cursor-pointer" data-region="2.2"></span>
+            </section>
+            <button id="resetButton">Recomeçar</button>
         </section>
 </body>
 </html>
