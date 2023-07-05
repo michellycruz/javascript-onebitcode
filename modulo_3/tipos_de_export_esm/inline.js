@@ -1,7 +1,7 @@
-function inline(){
+export function inline(){
     console.log('Export nomeado inline')
 }
 
-function defaultInline(){
+export default function defaultInline(){
     console.log('Export default inline')
 }
