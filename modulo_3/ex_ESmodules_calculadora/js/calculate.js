@@ -1,4 +1,4 @@
-export default function (){
+export default function calculate (){
     resultInput.value = 'ERROR'
     resultInput.classList.add('error')
     
@@ -8,4 +8,6 @@ export default function (){
     resultInput.classList.remove('error')
 }
 
-const resultInput = document.getElementById('result')
+
+export const resultInput = document.getElementById('result')
+document.getElementById('equal').addEventListener('click', calculate)

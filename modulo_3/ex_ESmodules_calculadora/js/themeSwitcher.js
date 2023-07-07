@@ -1,4 +1,5 @@
-export default function(){
+export default function
+themeSwitcher(){
     if(main.dataset.theme === 'dark'){
         root.style.setProperty('--bg-color', '#f1f5f9')
         root.style.setProperty('--border-color', '#aaa')
@@ -14,6 +15,7 @@ export default function(){
     }
 }
 
+document.getElementById('themeSwitcher').addEventListener('click', themeSwitcher)
 const root = document.querySelector(':root')
 const main = document.querySelector('main')
 

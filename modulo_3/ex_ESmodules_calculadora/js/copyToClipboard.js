@@ -10,5 +10,4 @@ export default function (ev){
     }
 }
 
-
-
+document.getElementById('copyToClipboard').addEventListener('click', copyToClipboard)
