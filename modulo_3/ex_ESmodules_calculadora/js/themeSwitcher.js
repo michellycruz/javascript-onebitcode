@@ -1,4 +1,4 @@
-export default function(){
+export default function switchTheme(){
     const main = document.querySelector('main')
     const root = document.querySelector(':root')
     if(main.dataset.theme === 'dark'){

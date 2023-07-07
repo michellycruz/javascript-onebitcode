@@ -1,4 +1,4 @@
-export default function(ev){
+export default function copyToClipboard(ev){
     const button = ev.currentTarget
     if(button.innerText === 'Copy'){
         button.innerText = 'Copied!'
