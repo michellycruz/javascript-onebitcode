@@ -1,3 +1,5 @@
+import calculate from "./calculate.js"
+
 const main = document.querySelector('main')
 const root = document.querySelector(':root')
 const input = document.getElementById('input')
@@ -32,16 +34,6 @@ input.addEventListener('keydown', function (ev){
 })
 
 document.getElementById('equal').addEventListener('click', calculate)
-
-function calculate(){
-    resultInput.value = 'ERROR'
-    resultInput.classList.add('error')
-    
-    const result = eval(input.value) //eval = avaliar //cuidado ao usar o eval
-    
-    resultInput.value = result
-    resultInput.classList.remove('error')
-}
 
 document.getElementById('copyToClipboard').addEventListener('click', function(ev){
     const button = ev.currentTarget
