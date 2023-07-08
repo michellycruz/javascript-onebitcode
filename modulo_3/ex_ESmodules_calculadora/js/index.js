@@ -1,5 +1,5 @@
 import calculate from "./calculate.js"
-import copyToClipboard from "./copyToClipboard"
+import copyToClipboard from "./copyToClipboard.js"
 import { handleButtonPress, handleClear, handleTyping } from "./keyHandlers.js"
 import switchTheme from "./switchTheme.js"
 
