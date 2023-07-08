@@ -5,7 +5,7 @@ export function handleButtonPress(ev){
     input.value += value
 }
 
-export function hadleClear(ev){
+export function handleClear(ev){
     input.value = ''
     input.focus()
 }
