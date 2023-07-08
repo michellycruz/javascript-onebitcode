@@ -1,5 +1,3 @@
-import calculate from "./calculate.js"
-
 const input = document.querySelector("#input")
 
 export function handleButtonPress(ev){
