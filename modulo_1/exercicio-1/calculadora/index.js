@@ -14,5 +14,5 @@ alert("Quatro operações básicas entre " + n1 + " e " + n2 + " :" +
       "\n\n" + n1 + " + " + n2 + " = " + soma +
       "\n" + n1 + " - " + n2 + " = " + sub +
       "\n" + n1 + " * " + n2 + " = " + mult +
-      "\n" + n1 + " / " + n2 + " = " + div   
+      "\n" + n1 + " / " + n2 + " = " + div
 )
