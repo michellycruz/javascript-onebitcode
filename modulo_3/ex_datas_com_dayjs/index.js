@@ -10,4 +10,4 @@ function birthday(date){
 }
 
 
-birthday("1996-12-21")
+birthday("1997-12-21")
