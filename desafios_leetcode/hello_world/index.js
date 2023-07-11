@@ -1,5 +1,5 @@
 let createHelloWorld = function(){
-    return() => 'Hello World' 
+    return() => 'Hello World'
 }
 
 window.onload = function(){
