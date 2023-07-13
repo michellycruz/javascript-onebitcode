@@ -50,4 +50,6 @@ const mode = (...numbers) => {
 };
 console.log(`Moda: ${mode(1, 1, 5, 4, 9, 7, 4, 3, 5, 2, 4, 0, 4)}`);
 
+
+// npx babel index.js para corrigir um código usando o babel
 // npx babel index.js --out-file dist.js para exportar o código corrigido pelo babel no terminal
