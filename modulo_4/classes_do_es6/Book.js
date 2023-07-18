@@ -18,3 +18,4 @@ console.log(eragon)
 console.log(eldest)
 
 console.log(eragon instanceof Book) // instanceof é um operador que serve para verificar se a instância "eragon" é da classe "Book"
+console.log([eragon, eldest] instanceof Array)
