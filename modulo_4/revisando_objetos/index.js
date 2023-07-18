@@ -29,6 +29,12 @@ function Book(title, pages, tags, author){
 
 const author = {name: 'Christopher Paolini'}
 const tags = ['Fantasy', 'adventure', 'medieval']
-const eragon = new Book('Eragon', 468, tags, author) //"new" forma de chamar as funções construtoras
 
+const eragon = new Book('Eragon', 468, tags, author) //"new", forma de chamar as funções construtoras
 console.log(eragon)
+
+const eldest = new Book('Eldest', 644, tags, author)
+console.log(eldest)
+
+const livroTeste = new Book('chapeuzinho vermelho', 50, 'fantasia', 'flaviovisk')
+console.log(livroTeste)
