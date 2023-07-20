@@ -6,5 +6,9 @@ class Product {
         this.inStock = 0
     }
 
-    addToStock
+    addToStock(quantity){
+        this.inStock += quantity
+    }
+
+    
 }
