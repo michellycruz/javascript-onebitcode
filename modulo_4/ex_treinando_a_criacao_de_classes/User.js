@@ -15,4 +15,5 @@ class User {
 
 const Maria = new User('Maria do Carmo', "maria@email.com", "1234")
 
-Maria.login('Maria do Carmo', '1234')
+console.log(Maria)
+Maria.login('maria@email.com', '1234')
