@@ -1,9 +1,7 @@
-const Address = require("./Address")
-
 class Person {
-    constructor(name, street, number, neighborhood, city, state){
+    constructor(name, address){
         this.name = name
-        this.address = new Address(street, number, neighborhood, city, state)
+        this.address = address
     }
 }
 
