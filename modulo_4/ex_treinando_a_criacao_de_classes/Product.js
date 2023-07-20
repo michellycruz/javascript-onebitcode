@@ -10,5 +10,12 @@ class Product {
         this.inStock += quantity
     }
 
-    
+    calculateDiscount(discount){
+        return this.price * ((100 - discount) / 100)
+    }
 }
+
+const mouse = new Product('Mouse Gamer', 'Mouse Gamer com led vermelho', 45)
+mouse.addToStock(99)
+
+console.log(mouse)
