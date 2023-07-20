@@ -17,5 +17,8 @@ class Product {
 
 const mouse = new Product('Mouse Gamer', 'Mouse Gamer com led vermelho', 45)
 mouse.addToStock(99)
+const priceWithDiscount = mouse.calculateDiscount(15)
 
 console.log(mouse)
+console.log(priceWithDiscount)
+console.log(mouse.calculateDiscount(10))
