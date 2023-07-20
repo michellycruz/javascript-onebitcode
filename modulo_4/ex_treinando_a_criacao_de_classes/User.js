@@ -13,7 +13,7 @@ class User {
     }
 }
 
-const Maria = new User('Maria do Carmo', "maria@email.com", "1234")
+const Maria = new User('Maria José', "maria@email.com", "1234")
 
 console.log(Maria)
 Maria.login('maria@email.com', '1234')
