@@ -1,3 +1,5 @@
+const Comment = require("./Comment")
+
 class Post {
     constructor(title, body, author){
         this.title = title
@@ -8,6 +10,8 @@ class Post {
     }
 
     addComment(username, content){
-        this.comments.push(new Comment)
+        this.comments.push(new Comment(username, content))
     }
 }
+
+module.exports = Post
