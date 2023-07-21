@@ -1,3 +1,5 @@
+const Post = require("./Post")
+
 class Author {
     constructor(name){
         this.name = name
