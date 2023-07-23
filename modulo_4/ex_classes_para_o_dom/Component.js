@@ -1,4 +1,4 @@
-export class Componet{
+export class Component{
     #element = null
 
     constructor(tag, parent, options){
