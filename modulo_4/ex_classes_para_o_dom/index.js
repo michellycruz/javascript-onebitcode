@@ -5,3 +5,7 @@ import {Label} from "./Label.js"
 
 const title = new Component('h1', 'body', {textContent: 'Olá, mundo!'})
 console.log(title)
+title.render()
+
+title.tag = 'h3'
+title.build().render()

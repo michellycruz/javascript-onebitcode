@@ -19,7 +19,7 @@ export class Component{
     }
 
     render(){
-        if (this.parent instanceof Componet){
+        if (this.parent instanceof Component){
             this.parent.getElement().append(this.#element)
         } else{
             document.querySelector(this.parent).append(this.#element)
