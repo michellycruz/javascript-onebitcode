@@ -5,7 +5,7 @@ App.createUser("uniqua@email.com", "Uniqua Beckyardigans")
 App.createUser("mariajose@email.com", "Maria José")
 
 App.deposit("mich@email.com", 3000)
-App.transfer("mich@rmail.com", "uniqua@email.com", 10)
+App.transfer("mich@email.com", "uniqua@email.com", 10)
 
 App.changeLoanFee(10)
 App.takeLoan("mariajose@email.com", 2000, 12)

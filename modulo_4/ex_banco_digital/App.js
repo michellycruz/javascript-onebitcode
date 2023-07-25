@@ -1,4 +1,5 @@
 const Deposit = require("./Deposit")
+const Transfer = require("./Transfer")
 const Loan = require("./Loan")
 const User = require("./User")
 
