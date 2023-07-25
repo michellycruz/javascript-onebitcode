@@ -54,4 +54,12 @@ module.exports = class App{
             }
         })
     }
+
+    getOrders(){
+        return App.#database.find('orders')
+    }
+    
+    showDarabase(){
+        App.#database.showStorage()
+    }
 }
