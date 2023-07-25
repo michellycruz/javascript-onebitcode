@@ -1,4 +1,4 @@
-modules.exports = class Account{
+module.exports = class Account{
       #balance
   //  #deposits
   //  #loans

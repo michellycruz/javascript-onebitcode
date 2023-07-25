@@ -2,7 +2,7 @@ const Deposit = require("./Deposit")
 const Loan = require("./Loan")
 const User = require("./User")
 
-modules.exports = class App{
+module.exports = class App{
     static #users = []
     static findUser(email){
         const user = this.#users.find(user => user.email === email)
