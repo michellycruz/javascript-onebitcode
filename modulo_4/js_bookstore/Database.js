@@ -1,7 +1,7 @@
 module.exports = class Database{
     #storage = {
-        author: [],
-        book: [],
+        authors: [],
+        books: [],
         poster: [],
         orders: [],
         users: []
@@ -11,11 +11,11 @@ module.exports = class Database{
         return this.#storage[key]
     }
 
-    saveAuthor(author){
+    saveAuthor(author) {
         this.#storage.authors.push(author)
     }
 
-    findBookByName(bookName){
+    findBookByName(bookName) {
         return this.#storage.books.find(b => b.name === bookName)
     }
 

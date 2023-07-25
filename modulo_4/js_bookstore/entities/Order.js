@@ -2,7 +2,7 @@ module.exports = class Order {
     #total
     #items
     #user
-    constructor(item, user){
+    constructor(items, user){
         items.forEach(({product, quantity})=>{
             if(quantity > product.inStock){
                 throw new Error('Quantidade insuficiente em estoque!')

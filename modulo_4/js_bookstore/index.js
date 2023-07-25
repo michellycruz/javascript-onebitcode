@@ -14,7 +14,7 @@ app.createBook('A Pirâmide Vermelha', '...', 'fantasy', 600, authors[1], '...',
 
 const books = app.getBooks()
 
-app.createUser('Isaac', 'isaac@email.com', '123456')
+app.createUser('Michelly', 'mich@email.com', '123456')
 
 const users = app.getUsers()
 
