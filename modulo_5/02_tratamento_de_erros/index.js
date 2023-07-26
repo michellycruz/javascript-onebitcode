@@ -22,3 +22,4 @@ try {
 } finally {
     console.log("Calculations finished")
 }
+
