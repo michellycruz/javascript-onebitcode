@@ -5,7 +5,7 @@ function step02(){
 }
 
 console.log('Passo 01')
-step02()
+step02() //na sincronicidade o código normalmente espera uma determinada função ser executada antes de seguir executando as outras.
 console.log('Passo 03')
 
 //CÓDIGO ASSÍNCRONO
