@@ -20,5 +20,10 @@ function renderArticle(articleData){
 }
 
 async function fetchArticles(){
-    const articles = await
+    const articles = await fetch('http://localhost:3000/articles').then(res => res.json())
+    articles.forEach(renderArticle)
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetchArticles()
+})
