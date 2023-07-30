@@ -27,3 +27,22 @@ async function fetchArticles(){
 document.addEventListener('DOMContentLoaded', () => {
     fetchArticles()
 })
+
+const form = document.querySelector('form')
+form.addEventListener('submit', async (ev) => {
+    ev.preventDefault() //para não mudar de página
+
+    const articleData = {
+        title: document.querySelector('#title').value,
+        author: document.querySelector('#author').value,
+        content: document.querySelector('#content').value
+    }
+
+    const response = await fetch('http://localhost:3000/articles', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(articleData)
+    })
+})
