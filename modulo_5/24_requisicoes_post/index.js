@@ -45,4 +45,8 @@ form.addEventListener('submit', async (ev) => {
         },
         body: JSON.stringify(articleData)
     })
+    const savedArticle = await response.json()
+    form.reset()
+    renderArticle(savedArticle)
+    console.log(savedArticle)
 })
