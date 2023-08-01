@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Digital</title>
+</head>
+<body>
+    <h1>Minhas finanças</h1>
+    <main>
+        <form>
+            <h2>Nova Transação</h2>
+            <input type="hidden" id="id" name="id">
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name">
+            <label for="amount">Valor</label>
+            <input type="number" name="amount" id="amount">
+            <br><br>
+            <button>Salvar</button>
+        </form>
+        <div>
+            <h2>Saldo: <span id="balance"></span></h2>
+            <h2>Histórico de Transações</h2>
+            <section id="transactions"></section>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
