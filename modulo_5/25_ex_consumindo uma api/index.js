@@ -32,3 +32,16 @@ function createTransactionAmount(amount){
 
     return span
 }
+
+function renderTransaction(transaction){
+    const container = createTransactionContainer(transaction.id)
+    const title = createTransactionTitle(transaction.name)
+    const amount = createTransactionAmount(transaction.amount)
+
+    container.append(title, amount)
+    document.querySelector('#transactions').append(container)
+}
+
+async function fetchTransactions(){
+    return await fetch('http://localhost:3000/transactions').then(res => res.json())
+}
