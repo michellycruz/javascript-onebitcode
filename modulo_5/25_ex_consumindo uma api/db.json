@@ -1,0 +1,29 @@
+{
+    "transactions":[
+        {
+            "id": 1,
+            "name": "salario",
+            "amount": 1300
+        },
+        {
+            "id": 2,
+            "name": "pão de queijo",
+            "amount": 4.00
+        },
+        {
+            "id": 3,
+            "name": "sacoléah",
+            "amount": 3.00
+        },
+        {
+            "id": 3,
+            "name": "Aluguel",
+            "amount": 600
+        },
+        {
+            "id": 4,
+            "name": "Conta de Luz",
+            "amount": 85
+        }
+    ]
+}
