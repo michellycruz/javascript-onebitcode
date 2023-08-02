@@ -1,6 +1,6 @@
 let transactions = []
 
-function createTransationContainer(id){
+function createTransactionContainer(id){
     const container = document.createElement('div')
     container.classList.add('transaction')
     container.id = `transaction-${id}`
@@ -15,7 +15,7 @@ function createTransactionTitle(name){
 }
 
 function createTransactionAmount(amount){
-    const span = documen.createElement('span')
+    const span = document.createElement('span')
 
     const formater = Intl.NumberFormat('pt-BR', {
         compactDisplay: 'long',
@@ -50,7 +50,7 @@ async function fetchTransactions(){
 
 function updateBalance(){
     const balanceSpan = document.querySelector('#balance')
-    const balance = transactions.reduce((sum, transactions) => sum + transa.amount, 0)
+    const balance = transactions.reduce((sum, transaction) => sum + transaction.amount, 0)
     const formater = Intl.NumberFormat(`pt-BR`, {
         compactDisplay: 'long',
         currency: 'BRL',
@@ -63,6 +63,7 @@ async function setup(){
     const results = await fetchTransactions()
     transactions.push(...results)
     transactions.forEach(renderTransaction)
+    updateBalance()
 }
 
 document.addEventListener('DOMContentLoaded', setup)
