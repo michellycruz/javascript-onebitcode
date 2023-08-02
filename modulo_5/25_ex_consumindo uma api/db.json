@@ -1,9 +1,9 @@
 {
   "transactions": [
     {
-      "id": 1,
       "name": "salario",
-      "amount": 1300
+      "amount": 2300,
+      "id": 1
     },
     {
       "id": 2,
@@ -29,11 +29,6 @@
       "name": "lanche",
       "amount": -25,
       "id": 5
-    },
-    {
-      "name": "Freela",
-      "amount": 900,
-      "id": 6
     }
   ]
 }
