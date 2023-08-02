@@ -60,20 +60,38 @@ function renderTransaction(transaction){
 async function saveTransaction(ev){
     ev.preventDefault()
 
+    const id = document.querySelector('#id').value
     const name = document.querySelector('#name').value
     const amount = parseFloat(document.querySelector('#amount').value)
 
-    const response = await fetch('http://localhost:3000/transactions', {
-        method: 'POST',
-        body: JSON.stringify({name, amount}),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-
-    const transaction = await response.json()
-    transactions.push(transaction)
-    renderTransaction(transaction)
+    if (id) {
+        //editar a transação com esse id
+        const response = await fetch(`http://localhost:3000/transactions/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify({name, amount}),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        const transaction = await response.json()
+        const indexToRemove = transactions.findIndex((t) => t.id === id)
+        transactions.splice(indexToRemove, 1, transaction)
+        document.querySelector(`#transaction-${id}`).remove()
+        renderTransaction(transaction)
+    } else {
+        //criar nova transação
+        const response = await fetch('http://localhost:3000/transactions', {
+            method: 'POST',
+            body: JSON.stringify({name, amount}),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    
+        const transaction = await response.json()
+        transactions.push(transaction)
+        renderTransaction(transaction)
+    }
 
     ev.target.reset()
     updateBalance()
