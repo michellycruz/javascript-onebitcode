@@ -7,11 +7,13 @@ let idadePMN = prompt("Por favor, informe a idade da pessoa mais nova")
 
 let diferencaIdade = idadePMV - idadePMN
 
-alert("| Pessoa mais velha |" +
-      "\nNome: " + nomePMV +
-      "\nIdade: " + idadePMV +
-      "\n\n| Pessoa mais nova |" +
-      "\nNome: " + nomePMN +
-      "\nIdade: " + idadePMN +
-      "\n\nDiferença de idade: " + diferencaIdade + " anos"
-      )
+alert(
+`|Pessoa mais velha|
+Nome: ${nomePMV}
+Idade: ${idadePMV}
+
+|Pessoa mais nova|
+Nome: ${nomePMN}
+Idade: ${idadePMN}
+Diferença de idade: ${diferencaIdade} anos
+`)
