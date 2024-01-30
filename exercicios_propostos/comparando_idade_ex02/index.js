@@ -18,6 +18,5 @@ Idade: ${idadePMV}
 Nome: ${nomePMN}
 Idade: ${idadePMN}
 
-|Diferença|
-
+Diferença de idade: ${diferencaIdade} 
 `);
