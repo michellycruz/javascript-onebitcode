@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mnipulando o DOM</title>
+    <script src="script.js"defer></script>
+</head>
+<body>
+    <h1>Home registration</h1>
+
+    <form action="">
+        <p>
+            <label for="">Area</label>
+            <input type="text" name="area">
+        </p>
+        <p>
+            <label for="">Número</label>
+            <input type="text" name="number">
+        </p>
+        <p>
+            <label for="">Bairro</label>
+            <input type="text" name="neighborhood">
+        </p>
+        <p>
+            <label for="">Cidade</label>
+            <input type="text" name="city">
+        </p>
+
+        <button onclick="saveHouse()" type="button">Salvar</button>
+    </form>
+
+    <ul id="house-list"></ul>
+</body>
+</html>
